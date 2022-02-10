@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="My_RPG_Game.Program">
+    <Position X="6.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.AvailableClasses">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="My_RPG_Game.AvailableClasses.Mage">
+        <TypeIdentifier>
+          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.AvailableClasses.Ranger">
+        <TypeIdentifier>
+          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.AvailableClasses.Rogue">
+        <TypeIdentifier>
+          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.AvailableClasses.Warrior">
+        <TypeIdentifier>
+          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CharacterClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
