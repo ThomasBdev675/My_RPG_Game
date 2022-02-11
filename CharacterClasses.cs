@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace My_RPG_Game
 {
-    public class AvailableClasses
+    public class Classtypes
     {
         ///Define Mage class and their attributes
         public class Mage
@@ -16,25 +16,28 @@ namespace My_RPG_Game
             protected double intelligence = 8;
 
             ///Show stats
-            public void ShowStats()
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
             {   ///Show base stats             
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
                 ///Run stat calculation
-                CalculateCurrentStats();  
+                CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
             }
 
             ///Calculate current stats  NOT YET DONE
-            protected void CalculateCurrentStats()
+            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                strenght += 1;
-                dexterity += 1;
-                intelligence += 1;
-                Console.WriteLine("Calculated Strenght: " + strenght );
-                Console.WriteLine("Calculated Dexterity: " + dexterity );
-                Console.WriteLine("Calculated Intelligence: " + intelligence );
-
+                double calculatedStrenght =  calculateStrenght +  strenght;
+                double calculalatedDexterity = calculateDexterity + dexterity;
+                double calculatedIntelligence = calculateIntelligence + intelligence;
+                
+                Console.WriteLine("Calculated Strenght: ");
+                Console.WriteLine(calculatedStrenght);
+                Console.WriteLine("Calculated Dexterity: ");
+                Console.WriteLine(calculalatedDexterity);
+                Console.WriteLine("Calculated Intelligence:");
+                Console.WriteLine(calculatedIntelligence);  
             }
         }
 
@@ -45,25 +48,28 @@ namespace My_RPG_Game
             protected double intelligence = 1;
 
             ///Show stats
-            public void ShowStats()
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
             {   ///Show base stats             
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
                 ///Run stat calculation
-                CalculateCurrentStats();
+                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Calculate current stats  NOT YET DONE
-            protected void CalculateCurrentStats()
+            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                strenght += 1;
-                dexterity += 1;
-                intelligence += 1;
-                Console.WriteLine("Calculated Strenght: " + strenght);
-                Console.WriteLine("Calculated Dexterity: " + dexterity);
-                Console.WriteLine("Calculated Intelligence: " + intelligence);
+                double calculatedStrenght = calculateStrenght + strenght;
+                double calculalatedDexterity = calculateDexterity + dexterity;
+                double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("Calculated Strenght: ");
+                Console.WriteLine(calculatedStrenght);
+                Console.WriteLine("Calculated Dexterity: ");
+                Console.WriteLine(calculalatedDexterity);
+                Console.WriteLine("Calculated Intelligence:");
+                Console.WriteLine(calculatedIntelligence);
             }
         }
 
@@ -74,25 +80,28 @@ namespace My_RPG_Game
             protected double intelligence = 1;
 
             ///Show stats
-            public void ShowStats()
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
             {   ///Show base stats             
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
                 ///Run stat calculation
-                CalculateCurrentStats();
+                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Calculate current stats  NOT YET DONE
-            protected void CalculateCurrentStats()
+            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                strenght += 1;
-                dexterity += 1;
-                intelligence += 1;
-                Console.WriteLine("Calculated Strenght: " + strenght);
-                Console.WriteLine("Calculated Dexterity: " + dexterity);
-                Console.WriteLine("Calculated Intelligence: " + intelligence);
+                double calculatedStrenght = calculateStrenght + strenght;
+                double calculalatedDexterity = calculateDexterity + dexterity;
+                double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("Calculated Strenght: ");
+                Console.WriteLine(calculatedStrenght);
+                Console.WriteLine("Calculated Dexterity: ");
+                Console.WriteLine(calculalatedDexterity);
+                Console.WriteLine("Calculated Intelligence:");
+                Console.WriteLine(calculatedIntelligence);
             }
         }
 
@@ -102,25 +111,28 @@ namespace My_RPG_Game
             protected double dexterity = 2;
             protected double intelligence = 1;
             ///Show stats
-            public void ShowStats()
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
             {   ///Show base stats             
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
                 ///Run stat calculation
-                CalculateCurrentStats();
+                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Calculate current stats  NOT YET DONE
-            protected void CalculateCurrentStats()
+            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                strenght += 1;
-                dexterity += 1;
-                intelligence += 1;
-                Console.WriteLine("Calculated Strenght: " + strenght);
-                Console.WriteLine("Calculated Dexterity: " + dexterity);
-                Console.WriteLine("Calculated Intelligence: " + intelligence);
+                double calculatedStrenght = calculateStrenght + strenght;
+                double calculalatedDexterity = calculateDexterity + dexterity;
+                double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("Calculated Strenght: ");
+                Console.WriteLine(calculatedStrenght);
+                Console.WriteLine("Calculated Dexterity: ");
+                Console.WriteLine(calculalatedDexterity);
+                Console.WriteLine("Calculated Intelligence:");
+                Console.WriteLine(calculatedIntelligence);
             }
         }
     }

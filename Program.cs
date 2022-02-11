@@ -14,20 +14,20 @@ namespace My_RPG_Game
                     switch (myCharacterSelection)
                 {
                     case "Mage":
-                        AvailableClasses.Mage MyMage = new AvailableClasses.Mage();
-                        MyMage.ShowStats();
+                        Classtypes.Mage MyMage = new Classtypes.Mage();
+                        MyMage.Stats(1,1,1);
                         break;
                     case "Ranger":
-                        AvailableClasses.Ranger MyRanger = new AvailableClasses.Ranger();
-                        MyRanger.ShowStats();
+                        Classtypes.Ranger MyRanger = new Classtypes.Ranger();
+                        MyRanger.Stats(1,1,1);
                         break;
                     case "Rogue":
-                        AvailableClasses.Rogue MyRogue = new AvailableClasses.Rogue();
-                        MyRogue.ShowStats();
+                        Classtypes.Rogue MyRogue = new Classtypes.Rogue();
+                        MyRogue.Stats(1,1,1);
                         break;
                     case "Warrior":
-                        AvailableClasses.Warrior MyWarrior = new AvailableClasses.Warrior();
-                        MyWarrior.ShowStats();
+                        Classtypes.Warrior MyWarrior = new Classtypes.Warrior();
+                        MyWarrior.Stats(1,1,1);
                         break;
                     default:
                         Console.WriteLine("You did not selected any available Character Type");
@@ -51,7 +51,7 @@ namespace My_RPG_Game
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to our RPG console game");
-            CharacterSelector("test");
+            CharacterSelector("Warrior");
 
         }
     }

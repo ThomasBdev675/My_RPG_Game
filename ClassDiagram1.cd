@@ -7,28 +7,28 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My_RPG_Game.AvailableClasses">
+  <Class Name="My_RPG_Game.Classtypes">
     <Position X="0.5" Y="0.5" Width="3.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Class Name="My_RPG_Game.AvailableClasses.Mage">
+      <Class Name="My_RPG_Game.Classtypes.Mage">
         <TypeIdentifier>
           <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="My_RPG_Game.AvailableClasses.Ranger">
+      <Class Name="My_RPG_Game.Classtypes.Ranger">
         <TypeIdentifier>
           <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="My_RPG_Game.AvailableClasses.Rogue">
+      <Class Name="My_RPG_Game.Classtypes.Rogue">
         <TypeIdentifier>
           <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="My_RPG_Game.AvailableClasses.Warrior">
+      <Class Name="My_RPG_Game.Classtypes.Warrior">
         <TypeIdentifier>
           <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
         </TypeIdentifier>
