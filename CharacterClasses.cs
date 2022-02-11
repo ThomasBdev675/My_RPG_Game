@@ -6,32 +6,45 @@ using System.Threading.Tasks;
 
 namespace My_RPG_Game
 {
-    public class Classtypes
+    public class Charactertypes
     {
         ///Define Mage class and their attributes
         public class Mage
         {
+            protected int lvl = 1;
             protected double strenght = 1;
             protected double dexterity = 1;
             protected double intelligence = 8;
 
-            ///Show stats
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
-            {   ///Show base stats             
+            ///Show base stats
+            ///No parameters needed
+            public void Stats()
+            {   ///Show base stats
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Base stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+            }
+            ///Using overloaded Method to calculate provided stats
+            ///Please ass Strenght, Dexterity and Intelligence for calculation
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            { 
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
             }
 
-            ///Calculate current stats  NOT YET DONE
+            ///Calculate new stats based on the provided increase 
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght =  calculateStrenght +  strenght;
                 double calculalatedDexterity = calculateDexterity + dexterity;
                 double calculatedIntelligence = calculateIntelligence + intelligence;
-                
+
+                Console.WriteLine("--------------------");
+                Console.WriteLine("New calculated stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Calculated Strenght: ");
                 Console.WriteLine(calculatedStrenght);
                 Console.WriteLine("Calculated Dexterity: ");
@@ -39,100 +52,262 @@ namespace My_RPG_Game
                 Console.WriteLine("Calculated Intelligence:");
                 Console.WriteLine(calculatedIntelligence);  
             }
+            ///Method to calculate level up based on provided lvl
+            ///Please provide the lvl to increase
+            public void LevelUp(int lvlIncrease)
+            {
+                CalculateLevelUp(lvlIncrease);
+            }
+            ///Calculate new lvl based on the provided increase
+            private void CalculateLevelUp( int lvlIncrease)
+            {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Before lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
+
+                lvl += lvl + lvlIncrease;
+                strenght += 1 * lvlIncrease;
+                dexterity += 1 * lvlIncrease;
+                intelligence += 5 * lvlIncrease;
+
+                Console.WriteLine("--------------------");
+                Console.WriteLine("After lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
+            }
+
         }
 
         public class Ranger
         {
+            protected int lvl = 1;
             protected double strenght = 1;
             protected double dexterity = 7;
             protected double intelligence = 1;
 
-            ///Show stats
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
-            {   ///Show base stats             
+            ///Show base stats
+            ///No parameters needed
+            public void Stats()
+            {   ///Show base stats
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Base stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+            }
+            ///Calculate new stats based on the provided increase 
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            {   
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
-            ///Calculate current stats  NOT YET DONE
+            ///Using overloaded Method to calculate provided stats
+            ///Please ass Strenght, Dexterity and Intelligence for calculation
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
                 double calculalatedDexterity = calculateDexterity + dexterity;
                 double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("--------------------");
+                Console.WriteLine("New calculated stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Calculated Strenght: ");
                 Console.WriteLine(calculatedStrenght);
                 Console.WriteLine("Calculated Dexterity: ");
                 Console.WriteLine(calculalatedDexterity);
                 Console.WriteLine("Calculated Intelligence:");
                 Console.WriteLine(calculatedIntelligence);
+            }
+            ///Method to calculate level up based on provided lvl
+            ///Please provide the lvl to increase
+            public void LevelUp(int lvlIncrease)
+            {
+                CalculateLevelUp(lvlIncrease);
+            }
+            ///Calculate new lvl based on the provided increase
+            private void CalculateLevelUp(int lvlIncrease)
+            {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Before lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
+
+                lvl += lvl + lvlIncrease;
+                strenght += 1 * lvlIncrease;
+                dexterity += 1 * lvlIncrease;
+                intelligence += 5 * lvlIncrease;
+
+                Console.WriteLine("--------------------");
+                Console.WriteLine("After lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
             }
         }
 
         public class Rogue
         {
+            protected int lvl = 1;
             protected double strenght = 2;
             protected double dexterity = 6;
             protected double intelligence = 1;
 
-            ///Show stats
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
-            {   ///Show base stats             
+            ///Show base stats
+            ///No parameters needed
+            public void Stats()
+            {   ///Show base stats
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Base stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+            }
+            ///Calculate new stats based on the provided increase 
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            {   
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
-            ///Calculate current stats  NOT YET DONE
+            ///Using overloaded Method to calculate provided stats
+            ///Please ass Strenght, Dexterity and Intelligence for calculation
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
                 double calculalatedDexterity = calculateDexterity + dexterity;
                 double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("--------------------");
+                Console.WriteLine("New calculated stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Calculated Strenght: ");
                 Console.WriteLine(calculatedStrenght);
                 Console.WriteLine("Calculated Dexterity: ");
                 Console.WriteLine(calculalatedDexterity);
                 Console.WriteLine("Calculated Intelligence:");
                 Console.WriteLine(calculatedIntelligence);
+
+            }
+            ///Method to calculate level up based on provided lvl
+            ///Please provide the lvl to increase
+            public void LevelUp(int lvlIncrease)
+            {
+                CalculateLevelUp(lvlIncrease);
+            }
+            ///Calculate new lvl based on the provided increase
+            private void CalculateLevelUp(int lvlIncrease)
+            {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Before lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
+
+                lvl += lvl + lvlIncrease;
+                strenght += 1 * lvlIncrease;
+                dexterity += 1 * lvlIncrease;
+                intelligence += 5 * lvlIncrease;
+
+                Console.WriteLine("--------------------");
+                Console.WriteLine("After lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
             }
         }
 
         public class Warrior
         {
+            protected int lvl = 1;
             protected double strenght = 5;
             protected double dexterity = 2;
             protected double intelligence = 1;
-            ///Show stats
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
-            {   ///Show base stats             
+
+            ///Show base stats
+            ///No parameters needed
+            public void Stats()
+            {   ///Show base stats
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Base stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+            }
+            ///Calculate new stats based on the provided increase 
+            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            {  
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
-            ///Calculate current stats  NOT YET DONE
+            ///Using overloaded Method to calculate provided stats
+            ///Please ass Strenght, Dexterity and Intelligence for calculation
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
                 double calculalatedDexterity = calculateDexterity + dexterity;
                 double calculatedIntelligence = calculateIntelligence + intelligence;
 
+                Console.WriteLine("--------------------");
+                Console.WriteLine("New calculated stats:");
+                Console.WriteLine("--------------------");
                 Console.WriteLine("Calculated Strenght: ");
                 Console.WriteLine(calculatedStrenght);
                 Console.WriteLine("Calculated Dexterity: ");
                 Console.WriteLine(calculalatedDexterity);
                 Console.WriteLine("Calculated Intelligence:");
                 Console.WriteLine(calculatedIntelligence);
+            }
+            ///Method to calculate level up based on provided lvl
+            ///Please provide the lvl to increase
+            public void LevelUp(int lvlIncrease)
+            {
+                CalculateLevelUp(lvlIncrease);
+            }
+            ///Calculate new lvl based on the provided increase
+            private void CalculateLevelUp(int lvlIncrease)
+            {
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Before lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
+
+                lvl += lvl + lvlIncrease;
+                strenght += 1 * lvlIncrease;
+                dexterity += 1 * lvlIncrease;
+                intelligence += 5 * lvlIncrease;
+
+                Console.WriteLine("--------------------");
+                Console.WriteLine("After lvl calculation:");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Strenght: " + strenght);
+                Console.WriteLine("Dexterity: " + dexterity);
+                Console.WriteLine("Intelligence: " + intelligence);
             }
         }
     }

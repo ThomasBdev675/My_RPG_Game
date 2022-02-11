@@ -14,20 +14,28 @@ namespace My_RPG_Game
                     switch (myCharacterSelection)
                 {
                     case "Mage":
-                        Classtypes.Mage MyMage = new Classtypes.Mage();
-                        MyMage.Stats(1,1,1);
+                        Charactertypes.Mage MyMage = new Charactertypes.Mage();
+                        MyMage.Stats();
+                        MyMage.Stats(1, 1, 1);
+                        MyMage.LevelUp(1);
                         break;
                     case "Ranger":
-                        Classtypes.Ranger MyRanger = new Classtypes.Ranger();
+                        Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
+                        MyRanger.Stats();
                         MyRanger.Stats(1,1,1);
+                        MyRanger.LevelUp(1);
                         break;
                     case "Rogue":
-                        Classtypes.Rogue MyRogue = new Classtypes.Rogue();
-                        MyRogue.Stats(1,1,1);
+                        Charactertypes.Rogue MyRogue = new Charactertypes.Rogue();
+                        MyRogue.Stats();
+                        MyRogue.Stats(1, 1, 1);
+                        MyRogue.LevelUp(1);
                         break;
                     case "Warrior":
-                        Classtypes.Warrior MyWarrior = new Classtypes.Warrior();
-                        MyWarrior.Stats(1,1,1);
+                        Charactertypes.Warrior MyWarrior = new Charactertypes.Warrior();
+                        MyWarrior.Stats();
+                        MyWarrior.Stats(1, 1, 1);
+                        MyWarrior.LevelUp(1);
                         break;
                     default:
                         Console.WriteLine("You did not selected any available Character Type");
@@ -41,7 +49,9 @@ namespace My_RPG_Game
                 }
             finally
             {
-                Console.WriteLine("Character Selection done");
+                Console.WriteLine("--------------------");
+                Console.WriteLine("End of our RPG Game");
+                Console.WriteLine("--------------------");
             }
         }
 
@@ -50,8 +60,10 @@ namespace My_RPG_Game
 
         static void Main(string[] args)
         {
+            Console.WriteLine("-------------------------------");
             Console.WriteLine("Welcome to our RPG console game");
-            CharacterSelector("Warrior");
+            Console.WriteLine("-------------------------------");
+            CharacterSelector("Mage");
 
         }
     }
