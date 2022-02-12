@@ -9,13 +9,10 @@ namespace My_RPG_Game
     public class Charactertypes
     {
         ///Public class to define Mage class and their attributes
-        public class Mage
+        public class Mage : PrimaryAttribute.Mage
         {
             protected string name = "";
             protected int lvl = 1;
-            protected double strenght = 1;
-            protected double dexterity = 1;
-            protected double intelligence = 8;
             protected string allowedArmor = "Cloth";
             protected string allowedWeapons = "Staff, Wand";
             protected double damage = 0;
@@ -98,13 +95,10 @@ namespace My_RPG_Game
 
         }
         ///Public class to define Ranger class and their attributes
-        public class Ranger
+        public class Ranger : PrimaryAttribute.Ranger
         {
             protected string name = "";
             protected int lvl = 1;
-            protected double strenght = 1;
-            protected double dexterity = 7;
-            protected double intelligence = 1;
             protected string allowedArmor = "Leather, Mail";
             protected string allowedWeapons = "Bow";
             protected double damage = 0;
@@ -186,13 +180,10 @@ namespace My_RPG_Game
             }
         }
         ///Public class to define Rogue class and their attributes
-        public class Rogue
+        public class Rogue : PrimaryAttribute.Rogue
         {
             protected string name = "";
             protected int lvl = 1;
-            protected double strenght = 2;
-            protected double dexterity = 6;
-            protected double intelligence = 1;
             protected string allowedArmor = "Leather, Mail";
             protected string allowedWeapons = "Dagger, Sword";
             protected double damage = 0;
@@ -275,13 +266,10 @@ namespace My_RPG_Game
             }
         }
         ///Public class to define Warrior class and their attributes
-        public class Warrior
+        public class Warrior : PrimaryAttribute.Warrior
         {
             protected string name = "";
             protected int lvl = 1;
-            protected double strenght = 5;
-            protected double dexterity = 2;
-            protected double intelligence = 1;
             protected string allowedArmor = "Mail, Plate";
             protected string allowedWeapons = "Axe,, Hammer, Sword";
             protected double damage = 0;

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="My_RPG_Game.Program">
-    <Position X="8.5" Y="0.5" Width="2" />
+    <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.Charactertypes">
-    <Position X="3.25" Y="0.5" Width="3.25" />
+    <Position X="5" Y="0.5" Width="3.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -37,6 +37,118 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CharacterClasses.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.WeaponTypes">
+    <Position X="13" Y="0.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="My_RPG_Game.WeaponTypes.Bows">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Daggers">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Hammers">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Staffs">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Swords">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Wands">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.WeaponTypes.Axes">
+        <TypeIdentifier>
+          <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WeaponTypes.cs</FileName>
+      <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.ArmorTypes">
+    <Position X="9.25" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="My_RPG_Game.ArmorTypes.Leather">
+        <TypeIdentifier>
+          <NewMemberFileName>ArmorTypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.ArmorTypes.Mail">
+        <TypeIdentifier>
+          <NewMemberFileName>ArmorTypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.ArmorTypes.Plate">
+        <TypeIdentifier>
+          <NewMemberFileName>ArmorTypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.ArmorTypes.Cloth">
+        <TypeIdentifier>
+          <NewMemberFileName>ArmorTypes.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArmorTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.PrimaryAttribute">
+    <Position X="1" Y="2.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="My_RPG_Game.PrimaryAttribute.Mage">
+        <TypeIdentifier>
+          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.PrimaryAttribute.Ranger">
+        <TypeIdentifier>
+          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.PrimaryAttribute.Rogue">
+        <TypeIdentifier>
+          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="My_RPG_Game.PrimaryAttribute.Warrior">
+        <TypeIdentifier>
+          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PrimaryAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
