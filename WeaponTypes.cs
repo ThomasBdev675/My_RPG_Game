@@ -8,7 +8,8 @@ namespace My_RPG_Game
 {
     class WeaponTypes
     {
-        public class Axes
+
+        public class Axes : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -23,7 +24,7 @@ namespace My_RPG_Game
             }
         }
 
-        public class Bows
+        public class Bows : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -40,7 +41,7 @@ namespace My_RPG_Game
 
         }
 
-        public class Daggers
+        public class Daggers : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -56,7 +57,7 @@ namespace My_RPG_Game
 
         }
 
-        public class Hammers
+        public class Hammers : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -72,7 +73,7 @@ namespace My_RPG_Game
 
         }
 
-        public class Staffs
+        public class Staffs : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -88,7 +89,7 @@ namespace My_RPG_Game
 
         }
 
-        public class Swords
+        public class Swords : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;
@@ -104,7 +105,7 @@ namespace My_RPG_Game
 
         }
 
-        public class Wands
+        public class Wands : Item
         {
             protected double baseDamage = 0;
             protected double attacksPerSecond = 0;

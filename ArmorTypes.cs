@@ -8,20 +8,20 @@ namespace My_RPG_Game
 {
     class ArmorTypes
     {
-        public class Cloth
-        {            
-        
+        public class Cloth : Item
+        {
+            
         }
 
-        public class Leather
+        public class Leather : Item
         {
 
         }
-        public class Mail
+        public class Mail : Item
         {
 
         }
-        public class Plate
+        public class Plate : Item
         {
 
         }
