@@ -11,33 +11,41 @@ namespace My_RPG_Game
         ///Public class to define Mage class and their attributes
         public class Mage
         {
+            protected string name = "";
             protected int lvl = 1;
             protected double strenght = 1;
             protected double dexterity = 1;
             protected double intelligence = 8;
+            protected string allowedArmor = "Cloth";
+            protected string allowedWeapons = "Staff, Wand";
+            protected double damage = 0;
 
             ///Public method to show base stats
             ///No parameters are needed
-            public void Stats()
+            public void BaseStats()
             {   ///Show base stats
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
+                Console.WriteLine("Name: " + name);
+                Console.WriteLine("lvl: " + lvl);
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Damage: " + damage);
             }
 
             ///Public method using overloading to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
             { 
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
             }
 
             ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase 
+            ///Calculate new stats based on the provided increase
+            ///ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght =  calculateStrenght +  strenght;
@@ -92,26 +100,33 @@ namespace My_RPG_Game
         ///Public class to define Ranger class and their attributes
         public class Ranger
         {
+            protected string name = "";
             protected int lvl = 1;
             protected double strenght = 1;
             protected double dexterity = 7;
             protected double intelligence = 1;
+            protected string allowedArmor = "Leather, Mail";
+            protected string allowedWeapons = "Bow";
+            protected double damage = 0;
 
             ///Public method to show base stats
             ///No parameters are needed
-            public void Stats()
+            public void BaseStats()
             {   ///Show base stats
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
+                Console.WriteLine("Name: " + name);
+                Console.WriteLine("lvl: " + lvl);
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Damage: " + damage);
             }
 
             ///Public method using overloading to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
             {   
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
@@ -119,6 +134,7 @@ namespace My_RPG_Game
 
             ///Protected method to calculate provided stats
             ///Calculate new stats based on the provided increase 
+            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
@@ -172,33 +188,41 @@ namespace My_RPG_Game
         ///Public class to define Rogue class and their attributes
         public class Rogue
         {
+            protected string name = "";
             protected int lvl = 1;
             protected double strenght = 2;
             protected double dexterity = 6;
             protected double intelligence = 1;
+            protected string allowedArmor = "Leather, Mail";
+            protected string allowedWeapons = "Dagger, Sword";
+            protected double damage = 0;
 
             ///Public method to show base stats
             ///No parameters are needed
-            public void Stats()
+            public void BaseStats()
             {   ///Show base stats
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
+                Console.WriteLine("Name: " + name);
+                Console.WriteLine("lvl: " + lvl);
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Damage: " + damage);
             }
 
             ///Public method using overloading to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
             {   
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase 
+            ///Calculate new stats based on the provided increase
+            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
@@ -253,33 +277,41 @@ namespace My_RPG_Game
         ///Public class to define Warrior class and their attributes
         public class Warrior
         {
+            protected string name = "";
             protected int lvl = 1;
             protected double strenght = 5;
             protected double dexterity = 2;
             protected double intelligence = 1;
+            protected string allowedArmor = "Mail, Plate";
+            protected string allowedWeapons = "Axe,, Hammer, Sword";
+            protected double damage = 0;
 
             ///Public method to show base stats
             ///No parameters are needed
-            public void Stats()
+            public void BaseStats()
             {   ///Show base stats
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
+                Console.WriteLine("Name: " + name);
+                Console.WriteLine("lvl: " + lvl);
                 Console.WriteLine("Strenght: " + strenght);
                 Console.WriteLine("Dexterity: " + dexterity);
                 Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Damage: " + damage);
             }
 
             ///Public method using overloading to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void Stats(double addStrenght, double addDexterity, double addIntelligence)
+            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
             {  
                 ///Run stat calculation
                 CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase 
+            ///Calculate new stats based on the provided increase
+            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
                 double calculatedStrenght = calculateStrenght + strenght;
