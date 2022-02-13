@@ -8,9 +8,9 @@ namespace My_RPG_Game
 {
     public class PrimaryAttribute
     {
-        protected double strenght { get; set; }
-        protected double dexterity { get; set; }
-        protected double intelligence { get; set; }
+        protected double Strenght { get; set; }
+        protected double Dexterity { get; set; }
+        protected double Intelligence { get; set; }
 
     }
 }
