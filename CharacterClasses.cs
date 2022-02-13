@@ -20,7 +20,9 @@ namespace My_RPG_Game
 
             public Mage()
             {
-
+                Strenght += 1;
+                Dexterity += 1;
+                Intelligence += 8;
             }
 
 
@@ -33,9 +35,9 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Name: " + name);
                 Console.WriteLine("lvl: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
                 Console.WriteLine("Damage: " + damage);
             }
 
@@ -52,9 +54,9 @@ namespace My_RPG_Game
             ///ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                double calculatedStrenght =  calculateStrenght +  strenght;
-                double calculalatedDexterity = calculateDexterity + dexterity;
-                double calculatedIntelligence = calculateIntelligence + intelligence;
+                double calculatedStrenght =  calculateStrenght +  Strenght;
+                double calculalatedDexterity = calculateDexterity + Dexterity;
+                double calculatedIntelligence = calculateIntelligence + Intelligence;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("New calculated stats:");
@@ -69,35 +71,35 @@ namespace My_RPG_Game
 
             ///Public method to calculate level up based on provided lvl
             ///Please provide the lvl to increase
-            public void LevelUp(int lvlIncrease)
+            public void LevelUp()
             {
-                CalculateLevelUp(lvlIncrease);
+                CalculateLevelUp();
             }
 
             ///Protected method to perform the calculate based on provided stats
             ///Calculate new lvl based on the provided increase
-            protected void CalculateLevelUp( int lvlIncrease)
+            protected void CalculateLevelUp()
             {
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += lvl + lvlIncrease;
-                strenght += 1 * lvlIncrease;
-                dexterity += 1 * lvlIncrease;
-                intelligence += 5 * lvlIncrease;
+                lvl += 1;
+                Strenght += 1 * 1;
+                Dexterity += 1 * 1;
+                Intelligence += 5 * 1;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
             }
 
         }
@@ -111,6 +113,14 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Bow";
             protected double damage = 0;
 
+            public Ranger()
+            {
+                Strenght += 1;
+                Dexterity += 7;
+                Intelligence += 1;
+            }
+
+
             ///Public method to show base stats
             ///No parameters are needed
             public void BaseStats()
@@ -120,9 +130,9 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Name: " + name);
                 Console.WriteLine("lvl: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
                 Console.WriteLine("Damage: " + damage);
             }
 
@@ -139,9 +149,9 @@ namespace My_RPG_Game
             //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + strenght;
-                double calculalatedDexterity = calculateDexterity + dexterity;
-                double calculatedIntelligence = calculateIntelligence + intelligence;
+                double calculatedStrenght = calculateStrenght + Strenght;
+                double calculalatedDexterity = calculateDexterity + Dexterity;
+                double calculatedIntelligence = calculateIntelligence + Intelligence;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("New calculated stats:");
@@ -156,35 +166,35 @@ namespace My_RPG_Game
 
             ///Public method to calculate level up based on provided lvl
             ///Please provide the lvl to increase
-            public void LevelUp(int lvlIncrease)
+            public void LevelUp()
             {
-                CalculateLevelUp(lvlIncrease);
+                CalculateLevelUp();
             }
 
             ///Protected method to perform the calculate based on provided stats
             ///Calculate new lvl based on the provided increase
-            protected void CalculateLevelUp(int lvlIncrease)
+            protected void CalculateLevelUp()
             {
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += lvl + lvlIncrease;
-                strenght += 1 * lvlIncrease;
-                dexterity += 1 * lvlIncrease;
-                intelligence += 5 * lvlIncrease;
+                lvl += 1;
+                Strenght += 1 * 1;
+                Dexterity += 1 * 1;
+                Intelligence += 5 * 1;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
             }
         }
         ///Public class to define Rogue class and their attributes
@@ -196,6 +206,13 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Dagger, Sword";
             protected double damage = 0;
 
+            public Rogue()
+            {
+                Strenght += 2;
+                Dexterity += 6;
+                Intelligence += 1;
+            }
+
             ///Public method to show base stats
             ///No parameters are needed
             public void BaseStats()
@@ -205,9 +222,9 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Name: " + name);
                 Console.WriteLine("lvl: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
                 Console.WriteLine("Damage: " + damage);
             }
 
@@ -224,9 +241,9 @@ namespace My_RPG_Game
             //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + strenght;
-                double calculalatedDexterity = calculateDexterity + dexterity;
-                double calculatedIntelligence = calculateIntelligence + intelligence;
+                double calculatedStrenght = calculateStrenght + Strenght;
+                double calculalatedDexterity = calculateDexterity + Dexterity;
+                double calculatedIntelligence = calculateIntelligence + Intelligence;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("New calculated stats:");
@@ -242,35 +259,35 @@ namespace My_RPG_Game
 
             ///Public method to calculate level up based on provided lvl
             ///Please provide the lvl to increase
-            public void LevelUp(int lvlIncrease)
+            public void LevelUp()
             {
-                CalculateLevelUp(lvlIncrease);
+                CalculateLevelUp();
             }
 
             ///Protected method to perform the calculate based on provided stats
             ///Calculate new lvl based on the provided increase
-            protected void CalculateLevelUp(int lvlIncrease)
+            protected void CalculateLevelUp()
             {
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += lvl + lvlIncrease;
-                strenght += 1 * lvlIncrease;
-                dexterity += 1 * lvlIncrease;
-                intelligence += 5 * lvlIncrease;
+                lvl += 1;
+                Strenght += 1 * 1;
+                Dexterity += 1 * 1;
+                Intelligence += 5 * 1;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
             }
         }
         ///Public class to define Warrior class and their attributes
@@ -282,6 +299,13 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Axe,, Hammer, Sword";
             protected double damage = 0;
 
+            public Warrior()
+            {
+                Strenght += 5;
+                Dexterity += 2;
+                Intelligence += 1;
+            }
+
             ///Public method to show base stats
             ///No parameters are needed
             public void BaseStats()
@@ -291,9 +315,9 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Name: " + name);
                 Console.WriteLine("lvl: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
                 Console.WriteLine("Damage: " + damage);
             }
 
@@ -310,9 +334,9 @@ namespace My_RPG_Game
             //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
             protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + strenght;
-                double calculalatedDexterity = calculateDexterity + dexterity;
-                double calculatedIntelligence = calculateIntelligence + intelligence;
+                double calculatedStrenght = calculateStrenght + Strenght;
+                double calculalatedDexterity = calculateDexterity + Dexterity;
+                double calculatedIntelligence = calculateIntelligence + Intelligence;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("New calculated stats:");
@@ -327,35 +351,35 @@ namespace My_RPG_Game
 
             ///Public method to calculate level up based on provided lvl
             ///Please provide the lvl to increase
-            public void LevelUp(int lvlIncrease)
+            public void LevelUp()
             {
-                CalculateLevelUp(lvlIncrease);
+                CalculateLevelUp();
             }
 
             ///Protected method to perform the calculate based on provided stats
             ///Calculate new lvl based on the provided increase
-            protected void CalculateLevelUp(int lvlIncrease)
+            protected void CalculateLevelUp()
             {
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += lvl + lvlIncrease;
-                strenght += 1 * lvlIncrease;
-                dexterity += 1 * lvlIncrease;
-                intelligence += 5 * lvlIncrease;
+                lvl += 1;
+                Strenght += 1 * 1;
+                Dexterity += 1 * 1;
+                Intelligence += 5 * 1;
 
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Level: " + lvl);
-                Console.WriteLine("Strenght: " + strenght);
-                Console.WriteLine("Dexterity: " + dexterity);
-                Console.WriteLine("Intelligence: " + intelligence);
+                Console.WriteLine("Strenght: " + Strenght);
+                Console.WriteLine("Dexterity: " + Dexterity);
+                Console.WriteLine("Intelligence: " + Intelligence);
             }
         }
     }
