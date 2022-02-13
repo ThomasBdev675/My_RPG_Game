@@ -22,7 +22,7 @@ namespace My_RPG_Game
                         MyMage.ShowPrimaryStats();
                         MyMage.BaseStats();
                         MyMage.CalculateCurrentStats(1, 1, 1);
-                        MyMage.LevelUp();
+                        MyMage.LevelUp();                        
                         break;
                     case "Ranger":
                         Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
@@ -59,10 +59,5 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
             }
         }
-
-
-
-
-
     }
 }
