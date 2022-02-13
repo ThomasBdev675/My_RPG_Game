@@ -16,15 +16,20 @@ namespace My_RPG_Game
             protected string allowedArmor = "Cloth";
             protected string allowedWeapons = "Staff, Wand";
             protected double damage = 0;
-            
 
+            ///Constructor for the Mage class to define their attributes
             public Mage()
             {
                 Strenght += 1;
                 Dexterity += 1;
                 Intelligence += 8;
             }
-
+            
+            /// Overriding method to show primary stats             
+            public override void ShowPrimaryStats()
+            {
+                base.ShowPrimaryStats();
+            }
 
             ///Public method to show base stats
             ///No parameters are needed
@@ -41,32 +46,12 @@ namespace My_RPG_Game
                 Console.WriteLine("Damage: " + damage);
             }
 
-            ///Public method using overloading to calculate provided stats
+            ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
+            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             { 
-                ///Run stat calculation
-                CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
-            }
-
-            ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase
-            ///ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
-            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
-            {
-                double calculatedStrenght =  calculateStrenght +  Strenght;
-                double calculalatedDexterity = calculateDexterity + Dexterity;
-                double calculatedIntelligence = calculateIntelligence + Intelligence;
-
-                Console.WriteLine("--------------------");
-                Console.WriteLine("New calculated stats:");
-                Console.WriteLine("--------------------");
-                Console.WriteLine("Calculated Strenght: ");
-                Console.WriteLine(calculatedStrenght);
-                Console.WriteLine("Calculated Dexterity: ");
-                Console.WriteLine(calculalatedDexterity);
-                Console.WriteLine("Calculated Intelligence:");
-                Console.WriteLine(calculatedIntelligence);  
+                ///Run stat calculation from shared method using ovveride
+                base.CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
             }
 
             ///Public method to calculate level up based on provided lvl
@@ -113,6 +98,7 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Bow";
             protected double damage = 0;
 
+            ///Constructor for the Mage class to define their attributes
             public Ranger()
             {
                 Strenght += 1;
@@ -120,6 +106,11 @@ namespace My_RPG_Game
                 Intelligence += 1;
             }
 
+            /// Overriding method to show primary stats
+            public override void ShowPrimaryStats()
+            {
+                base.ShowPrimaryStats();
+            }
 
             ///Public method to show base stats
             ///No parameters are needed
@@ -136,32 +127,12 @@ namespace My_RPG_Game
                 Console.WriteLine("Damage: " + damage);
             }
 
-            ///Public method using overloading to calculate provided stats
+            ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
-            {   
-                ///Run stat calculation
-                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
-            }
-
-            ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase 
-            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
-            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
+            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + Strenght;
-                double calculalatedDexterity = calculateDexterity + Dexterity;
-                double calculatedIntelligence = calculateIntelligence + Intelligence;
-
-                Console.WriteLine("--------------------");
-                Console.WriteLine("New calculated stats:");
-                Console.WriteLine("--------------------");
-                Console.WriteLine("Calculated Strenght: ");
-                Console.WriteLine(calculatedStrenght);
-                Console.WriteLine("Calculated Dexterity: ");
-                Console.WriteLine(calculalatedDexterity);
-                Console.WriteLine("Calculated Intelligence:");
-                Console.WriteLine(calculatedIntelligence);
+                ///Run stat calculation from shared method using ovveride
+                base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Public method to calculate level up based on provided lvl
@@ -197,6 +168,7 @@ namespace My_RPG_Game
                 Console.WriteLine("Intelligence: " + Intelligence);
             }
         }
+
         ///Public class to define Rogue class and their attributes
         public class Rogue : PrimaryAttribute
         {
@@ -206,11 +178,18 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Dagger, Sword";
             protected double damage = 0;
 
+            ///Constructor for the Mage class to define their attributes
             public Rogue()
             {
                 Strenght += 2;
                 Dexterity += 6;
                 Intelligence += 1;
+            }
+
+            /// Overriding method to show primary stats
+            public override void ShowPrimaryStats()
+            {
+                base.ShowPrimaryStats();
             }
 
             ///Public method to show base stats
@@ -228,33 +207,12 @@ namespace My_RPG_Game
                 Console.WriteLine("Damage: " + damage);
             }
 
-            ///Public method using overloading to calculate provided stats
+            ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
-            {   
-                ///Run stat calculation
-                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
-            }
-
-            ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase
-            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
-            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
+            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + Strenght;
-                double calculalatedDexterity = calculateDexterity + Dexterity;
-                double calculatedIntelligence = calculateIntelligence + Intelligence;
-
-                Console.WriteLine("--------------------");
-                Console.WriteLine("New calculated stats:");
-                Console.WriteLine("--------------------");
-                Console.WriteLine("Calculated Strenght: ");
-                Console.WriteLine(calculatedStrenght);
-                Console.WriteLine("Calculated Dexterity: ");
-                Console.WriteLine(calculalatedDexterity);
-                Console.WriteLine("Calculated Intelligence:");
-                Console.WriteLine(calculatedIntelligence);
-
+                ///Run stat calculation from shared method using ovveride
+                base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Public method to calculate level up based on provided lvl
@@ -290,6 +248,7 @@ namespace My_RPG_Game
                 Console.WriteLine("Intelligence: " + Intelligence);
             }
         }
+
         ///Public class to define Warrior class and their attributes
         public class Warrior : PrimaryAttribute
         {
@@ -299,11 +258,18 @@ namespace My_RPG_Game
             protected string allowedWeapons = "Axe,, Hammer, Sword";
             protected double damage = 0;
 
+            ///Constructor for the Mage class to define their attributes
             public Warrior()
             {
                 Strenght += 5;
                 Dexterity += 2;
                 Intelligence += 1;
+            }
+
+            /// Overriding method to show primary stats
+            public override void ShowPrimaryStats()
+            {
+                base.ShowPrimaryStats();
             }
 
             ///Public method to show base stats
@@ -321,32 +287,12 @@ namespace My_RPG_Game
                 Console.WriteLine("Damage: " + damage);
             }
 
-            ///Public method using overloading to calculate provided stats
+            ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public void BaseStats(double addStrenght, double addDexterity, double addIntelligence)
-            {  
-                ///Run stat calculation
-                CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
-            }
-
-            ///Protected method to calculate provided stats
-            ///Calculate new stats based on the provided increase
-            //////ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
-            protected void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
+            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
-                double calculatedStrenght = calculateStrenght + Strenght;
-                double calculalatedDexterity = calculateDexterity + Dexterity;
-                double calculatedIntelligence = calculateIntelligence + Intelligence;
-
-                Console.WriteLine("--------------------");
-                Console.WriteLine("New calculated stats:");
-                Console.WriteLine("--------------------");
-                Console.WriteLine("Calculated Strenght: ");
-                Console.WriteLine(calculatedStrenght);
-                Console.WriteLine("Calculated Dexterity: ");
-                Console.WriteLine(calculalatedDexterity);
-                Console.WriteLine("Calculated Intelligence:");
-                Console.WriteLine(calculatedIntelligence);
+                ///Run stat calculation from shared method using ovveride
+                base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
             }
 
             ///Public method to calculate level up based on provided lvl

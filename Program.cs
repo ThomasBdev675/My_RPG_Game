@@ -15,26 +15,27 @@ namespace My_RPG_Game
                 {
                     case "Mage":
                         Charactertypes.Mage MyMage = new Charactertypes.Mage();
+                        MyMage.ShowPrimaryStats();
                         MyMage.BaseStats();
-                        MyMage.BaseStats(1, 1, 1);
+                        MyMage.CalculateCurrentStats(1, 1, 1);
                         MyMage.LevelUp();
                         break;
                     case "Ranger":
                         Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
                         MyRanger.BaseStats();
-                        MyRanger.BaseStats(1, 1, 1);
+                        MyRanger.CalculateCurrentStats(1, 1, 1);
                         MyRanger.LevelUp();
                         break;
                     case "Rogue":
                         Charactertypes.Rogue MyRogue = new Charactertypes.Rogue();
                         MyRogue.BaseStats();
-                        MyRogue.BaseStats(1, 1, 1);
+                        MyRogue.CalculateCurrentStats(1, 1, 1);
                         MyRogue.LevelUp();
                         break;
                     case "Warrior":
                         Charactertypes.Warrior MyWarrior = new Charactertypes.Warrior();
                         MyWarrior.BaseStats();
-                        MyWarrior.BaseStats(1, 1, 1);
+                        MyWarrior.CalculateCurrentStats(1, 1, 1);
                         MyWarrior.LevelUp();
                         break;
                     default:
@@ -62,7 +63,7 @@ namespace My_RPG_Game
             Console.WriteLine("-------------------------------");
             Console.WriteLine("Welcome to our RPG console game");
             Console.WriteLine("-------------------------------");
-            CharacterSelector("Warrior");
+            CharacterSelector("Mage");
 
                        
 
