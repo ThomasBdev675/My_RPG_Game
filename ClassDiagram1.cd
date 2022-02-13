@@ -124,30 +124,8 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Class Name="My_RPG_Game.PrimaryAttribute.Mage">
-        <TypeIdentifier>
-          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.PrimaryAttribute.Ranger">
-        <TypeIdentifier>
-          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.PrimaryAttribute.Rogue">
-        <TypeIdentifier>
-          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.PrimaryAttribute.Warrior">
-        <TypeIdentifier>
-          <NewMemberFileName>PrimaryAttribute.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PrimaryAttribute.cs</FileName>
     </TypeIdentifier>
   </Class>

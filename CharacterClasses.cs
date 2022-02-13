@@ -9,13 +9,20 @@ namespace My_RPG_Game
     public class Charactertypes
     {
         ///Public class to define Mage class and their attributes
-        public class Mage : PrimaryAttribute.Mage
+        public class Mage : PrimaryAttribute
         {
             protected string name = "";
             protected int lvl = 1;
             protected string allowedArmor = "Cloth";
             protected string allowedWeapons = "Staff, Wand";
             protected double damage = 0;
+            
+
+            public Mage()
+            {
+
+            }
+
 
             ///Public method to show base stats
             ///No parameters are needed
@@ -94,8 +101,9 @@ namespace My_RPG_Game
             }
 
         }
+
         ///Public class to define Ranger class and their attributes
-        public class Ranger : PrimaryAttribute.Ranger
+        public class Ranger : PrimaryAttribute
         {
             protected string name = "";
             protected int lvl = 1;
@@ -180,7 +188,7 @@ namespace My_RPG_Game
             }
         }
         ///Public class to define Rogue class and their attributes
-        public class Rogue : PrimaryAttribute.Rogue
+        public class Rogue : PrimaryAttribute
         {
             protected string name = "";
             protected int lvl = 1;
@@ -266,7 +274,7 @@ namespace My_RPG_Game
             }
         }
         ///Public class to define Warrior class and their attributes
-        public class Warrior : PrimaryAttribute.Warrior
+        public class Warrior : PrimaryAttribute
         {
             protected string name = "";
             protected int lvl = 1;
