@@ -63,7 +63,7 @@ namespace My_RPG_Game
             Console.WriteLine("-------------------------------");
             Console.WriteLine("Welcome to our RPG console game");
             Console.WriteLine("-------------------------------");
-            CharacterSelector("Mage");
+            CharacterSelector("Warrior");
 
                        
 

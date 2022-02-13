@@ -11,15 +11,19 @@ namespace My_RPG_Game
         ///Public class to define Mage class and their attributes
         public class Mage : PrimaryAttribute
         {
-            protected string name = "";
-            protected int lvl = 1;
-            protected string allowedArmor = "Cloth";
-            protected string allowedWeapons = "Staff, Wand";
-            protected double damage = 0;
+            protected string Name { get; set; }
+            protected int Lvl { get; set; }
+            protected string AllowedArmor { get; set; }
+            protected string AllowedWeapons { get; set; }
+            protected double Damage { get; set; }
 
             ///Constructor for the Mage class to define their attributes
             public Mage()
             {
+                Lvl += 1;
+                AllowedArmor = "Cloth";
+                AllowedWeapons = "Staff, Wand";
+                Damage += 0;
                 Strenght += 1;
                 Dexterity += 1;
                 Intelligence += 8;
@@ -38,12 +42,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Name: " + name);
-                Console.WriteLine("lvl: " + lvl);
+                Console.WriteLine("Name: " + Name);
+                Console.WriteLine("lvl: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
-                Console.WriteLine("Damage: " + damage);
+                Console.WriteLine("Damage: " + Damage);
             }
 
             ///Public override method to calculate provided stats
@@ -68,12 +72,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += 1;
+                Lvl += 1;
                 Strenght += 1 * 1;
                 Dexterity += 1 * 1;
                 Intelligence += 5 * 1;
@@ -81,7 +85,7 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
@@ -92,15 +96,19 @@ namespace My_RPG_Game
         ///Public class to define Ranger class and their attributes
         public class Ranger : PrimaryAttribute
         {
-            protected string name = "";
-            protected int lvl = 1;
-            protected string allowedArmor = "Leather, Mail";
-            protected string allowedWeapons = "Bow";
-            protected double damage = 0;
+            protected string Name { get; set; }
+            protected int Lvl { get; set; }
+            protected string AllowedArmor { get; set; }
+            protected string AllowedWeapons { get; set; }
+            protected double Damage { get; set; }
 
             ///Constructor for the Mage class to define their attributes
             public Ranger()
             {
+                Lvl += 1;
+                AllowedArmor = "Leather, Mail";
+                AllowedWeapons = "Bow";
+                Damage += 0;
                 Strenght += 1;
                 Dexterity += 7;
                 Intelligence += 1;
@@ -119,12 +127,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Name: " + name);
-                Console.WriteLine("lvl: " + lvl);
+                Console.WriteLine("Name: " + Name);
+                Console.WriteLine("lvl: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
-                Console.WriteLine("Damage: " + damage);
+                Console.WriteLine("Damage: " + Damage);
             }
 
             ///Public override method to calculate provided stats
@@ -149,12 +157,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += 1;
+                Lvl += 1;
                 Strenght += 1 * 1;
                 Dexterity += 1 * 1;
                 Intelligence += 5 * 1;
@@ -162,7 +170,7 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
@@ -172,15 +180,19 @@ namespace My_RPG_Game
         ///Public class to define Rogue class and their attributes
         public class Rogue : PrimaryAttribute
         {
-            protected string name = "";
-            protected int lvl = 1;
-            protected string allowedArmor = "Leather, Mail";
-            protected string allowedWeapons = "Dagger, Sword";
-            protected double damage = 0;
+            protected string Name { get; set; }
+            protected int Lvl { get; set; }
+            protected string AllowedArmor { get; set; }
+            protected string AllowedWeapons { get; set; }
+            protected double Damage { get; set; }
 
             ///Constructor for the Mage class to define their attributes
             public Rogue()
             {
+                Lvl += 1;
+                AllowedArmor = "Leather, Mail";
+                AllowedWeapons = "Dagger, Sword";
+                Damage += 0;
                 Strenght += 2;
                 Dexterity += 6;
                 Intelligence += 1;
@@ -199,12 +211,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Name: " + name);
-                Console.WriteLine("lvl: " + lvl);
+                Console.WriteLine("Name: " + Name);
+                Console.WriteLine("lvl: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
-                Console.WriteLine("Damage: " + damage);
+                Console.WriteLine("Damage: " + Damage);
             }
 
             ///Public override method to calculate provided stats
@@ -229,12 +241,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += 1;
+                Lvl += 1;
                 Strenght += 1 * 1;
                 Dexterity += 1 * 1;
                 Intelligence += 5 * 1;
@@ -242,7 +254,7 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
@@ -252,15 +264,19 @@ namespace My_RPG_Game
         ///Public class to define Warrior class and their attributes
         public class Warrior : PrimaryAttribute
         {
-            protected string name = "";
-            protected int lvl = 1;
-            protected string allowedArmor = "Mail, Plate";
-            protected string allowedWeapons = "Axe,, Hammer, Sword";
-            protected double damage = 0;
+            protected string Name { get; set; }
+            protected int Lvl { get; set; }
+            protected string AllowedArmor { get; set; }
+            protected string AllowedWeapons { get; set; }
+            protected double Damage { get; set; }
 
             ///Constructor for the Mage class to define their attributes
             public Warrior()
             {
+                Lvl += 1;
+                AllowedArmor = "Mail, Plate";
+                AllowedWeapons = "Axe,, Hammer, Sword";
+                Damage += 0;
                 Strenght += 5;
                 Dexterity += 2;
                 Intelligence += 1;
@@ -279,12 +295,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Base stats:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Name: " + name);
-                Console.WriteLine("lvl: " + lvl);
+                Console.WriteLine("Name: " + Name);
+                Console.WriteLine("lvl: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
-                Console.WriteLine("Damage: " + damage);
+                Console.WriteLine("Damage: " + Damage);
             }
 
             ///Public override method to calculate provided stats
@@ -309,12 +325,12 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("Before lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
 
-                lvl += 1;
+                Lvl += 1;
                 Strenght += 1 * 1;
                 Dexterity += 1 * 1;
                 Intelligence += 5 * 1;
@@ -322,7 +338,7 @@ namespace My_RPG_Game
                 Console.WriteLine("--------------------");
                 Console.WriteLine("After lvl calculation:");
                 Console.WriteLine("--------------------");
-                Console.WriteLine("Level: " + lvl);
+                Console.WriteLine("Level: " + Lvl);
                 Console.WriteLine("Strenght: " + Strenght);
                 Console.WriteLine("Dexterity: " + Dexterity);
                 Console.WriteLine("Intelligence: " + Intelligence);
