@@ -10,19 +10,55 @@ namespace My_RPG_Game
     {
         public class Cloth : Item
         {
-            
+
+
+
+            public Cloth()
+            {
+                Name += 1;
+                RequiredLvl = 1;
+                Slot = "";
+            }
+
         }
 
         public class Leather : Item
         {
 
+
+
+            public Leather()
+            {
+                Name += 1;
+                RequiredLvl = 1;
+                Slot = "";
+            }
+
         }
         public class Mail : Item
         {
 
+
+
+            public Mail()
+            {
+                Name += 1;
+                RequiredLvl = 1;
+                Slot = "";
+            }
+
         }
         public class Plate : Item
         {
+
+
+
+            public Plate()
+            {
+                Name += 1;
+                RequiredLvl = 1;
+                Slot = "";
+            }
 
         }
     }

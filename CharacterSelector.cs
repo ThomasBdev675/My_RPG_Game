@@ -21,25 +21,25 @@ namespace My_RPG_Game
                         Charactertypes.Mage MyMage = new Charactertypes.Mage();
                         MyMage.ShowPrimaryStats();
                         MyMage.BaseStats();
-                        MyMage.CalculateCurrentStats(1, 1, 1);
+                        //MyMage.CalculateCurrentStats(1, 1, 1);
                         MyMage.LevelUp();                        
                         break;
                     case "Ranger":
                         Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
                         MyRanger.BaseStats();
-                        MyRanger.CalculateCurrentStats(1, 1, 1);
+                        //MyRanger.CalculateCurrentStats(1, 1, 1);
                         MyRanger.LevelUp();
                         break;
                     case "Rogue":
                         Charactertypes.Rogue MyRogue = new Charactertypes.Rogue();
                         MyRogue.BaseStats();
-                        MyRogue.CalculateCurrentStats(1, 1, 1);
+                        //MyRogue.CalculateCurrentStats(1, 1, 1);
                         MyRogue.LevelUp();
                         break;
                     case "Warrior":
                         Charactertypes.Warrior MyWarrior = new Charactertypes.Warrior();
                         MyWarrior.BaseStats();
-                        MyWarrior.CalculateCurrentStats(1, 1, 1);
+                        //MyWarrior.CalculateCurrentStats(1, 1, 1);
                         MyWarrior.LevelUp();
                         break;
                     default:

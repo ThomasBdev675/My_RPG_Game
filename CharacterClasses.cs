@@ -52,7 +52,7 @@ namespace My_RPG_Game
 
             ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
+            protected override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             { 
                 ///Run stat calculation from shared method using ovveride
                 base.CalculateCurrentStats(addStrenght,addDexterity,addIntelligence);  
@@ -137,7 +137,7 @@ namespace My_RPG_Game
 
             ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
+            protected override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
                 ///Run stat calculation from shared method using ovveride
                 base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
@@ -221,7 +221,7 @@ namespace My_RPG_Game
 
             ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
+            protected override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
                 ///Run stat calculation from shared method using ovveride
                 base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);
@@ -305,7 +305,7 @@ namespace My_RPG_Game
 
             ///Public override method to calculate provided stats
             ///Please add Strenght, Dexterity and Intelligence for calculation
-            public override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
+            protected override void CalculateCurrentStats(double addStrenght, double addDexterity, double addIntelligence)
             {
                 ///Run stat calculation from shared method using ovveride
                 base.CalculateCurrentStats(addStrenght, addDexterity, addIntelligence);

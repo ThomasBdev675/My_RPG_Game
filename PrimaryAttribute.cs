@@ -26,7 +26,7 @@ namespace My_RPG_Game
         ///Virtual method to calculate provided stats
         ///Calculate new stats based on the provided increase
         ///ATT!! WEAPON AND ARMOR STATS NOT YET CALCULATED
-        public virtual void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
+        protected virtual void CalculateCurrentStats(double calculateStrenght, double calculateDexterity, double calculateIntelligence)
         {
             double calculatedStrenght = calculateStrenght + Strenght;
             double calculalatedDexterity = calculateDexterity + Dexterity;
