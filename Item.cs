@@ -8,9 +8,8 @@ namespace My_RPG_Game
 {
     public class Item
     {      
-       protected string Name { get; set; }
-        protected double RequiredLvl { get; set; }
-        protected string Slot { get; set; }
-
+       public string Name { get; set; }
+       public double RequiredLvl { get; set; }
+       public string Slot { get; set; }
     }
 }

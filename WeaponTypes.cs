@@ -6,180 +6,31 @@ using System.Threading.Tasks;
 
 namespace My_RPG_Game
 {
-    class WeaponTypes
+    public enum AvailableWeapons
     {
+        Axes = 1,
+        Bows = 2,
+        Daggers = 3,
+        Hammers = 4,
+        Staffs = 5,
+        Swords = 6,
+        Wands = 7,
+    }
 
-        public class Axes : Item
+    class WeaponTypes : Item
+    {
+        public double BaseDamage { get; set; }
+        public double AttacksPerSecond { get; set; }
+
+        public void EquipWeapon(int availableWeapon)
         {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Axes()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-            public void CalculateAxesDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
+            AvailableWeapons selectedWeapon = (AvailableWeapons)availableWeapon;
+            Console.WriteLine(selectedWeapon);
         }
 
-        public class Bows : Item
+        public void CalculateDPS()
         {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Bows()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateBowsDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
-        }
-
-        public class Daggers : Item
-        {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Daggers()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateDaggersDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
-        }
-
-        public class Hammers : Item
-        {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Hammers()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateHammersDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
-        }
-
-        public class Staffs : Item
-        {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Staffs()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateStaffsDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
-        }
-
-        public class Swords : Item
-        {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Swords()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateSwordsDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
-        }
-
-        public class Wands : Item
-        {
-            protected double BaseDamage { get; set; }
-            protected double AttacksPerSecond { get; set; }
-
-            public Wands()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-                BaseDamage = 0;
-                AttacksPerSecond = 0;
-            }
-
-            public void CalculateWandsDPS()
-            {
-                CalculateDPS();
-            }
-            protected void CalculateDPS()
-            {
-                double calculatedDPS = BaseDamage * AttacksPerSecond;
-            }
-
+            double calculatedDPS = BaseDamage * AttacksPerSecond;
         }
     }
 }

@@ -20,9 +20,9 @@ namespace My_RPG_Game
                     case "Mage":
                         Charactertypes.Mage MyMage = new Charactertypes.Mage();
                         MyMage.ShowPrimaryStats();
-                        MyMage.BaseStats();
+                        //MyMage.BaseStats();
                         //MyMage.CalculateCurrentStats(1, 1, 1);
-                        MyMage.LevelUp();                        
+                        //MyMage.LevelUp();
                         break;
                     case "Ranger":
                         Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();

@@ -6,60 +6,20 @@ using System.Threading.Tasks;
 
 namespace My_RPG_Game
 {
-    class ArmorTypes
+    public enum AvailableArmor
     {
-        public class Cloth : Item
+        Cloth = 1,
+        Leather = 2,
+        Mail = 3,
+        Plate = 4,
+    }
+
+    public class ArmorTypes : Item
+    {
+        public void EquipArmor(int availableArmor)
         {
-
-
-
-            public Cloth()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-            }
-
-        }
-
-        public class Leather : Item
-        {
-
-
-
-            public Leather()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-            }
-
-        }
-        public class Mail : Item
-        {
-
-
-
-            public Mail()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-            }
-
-        }
-        public class Plate : Item
-        {
-
-
-
-            public Plate()
-            {
-                Name += 1;
-                RequiredLvl = 1;
-                Slot = "";
-            }
-
+            AvailableArmor selectedArmor = (AvailableArmor)availableArmor;
+            Console.WriteLine(selectedArmor);
         }
     }
 }
