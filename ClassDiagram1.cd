@@ -50,7 +50,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.Item">
-    <Position X="8.75" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Item.cs</FileName>
@@ -63,18 +63,8 @@
       <FileName>CharacterSelector.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My_RPG_Game.ArmorTypes">
-    <Position X="7.25" Y="2.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ArmorTypes.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="My_RPG_Game.EquipmentManager">
-    <Position X="12.5" Y="0.5" Width="2.5" />
+    <Position X="8.5" Y="0.5" Width="2.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -100,13 +90,16 @@
         </TypeIdentifier>
       </Class>
       <Class Name="My_RPG_Game.EquipmentManager.WeaponManager">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
         <NestedTypes>
-          <Enum Name="My_RPG_Game.EquipmentManager.WeaponManager.AvailableWeapons" Collapsed="true">
+          <Enum Name="My_RPG_Game.EquipmentManager.WeaponManager.AvailableWeapons">
             <TypeIdentifier>
               <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
             </TypeIdentifier>
           </Enum>
-          <Class Name="My_RPG_Game.EquipmentManager.WeaponManager.WeaponTypes" Collapsed="true">
+          <Class Name="My_RPG_Game.EquipmentManager.WeaponManager.WeaponTypes">
             <TypeIdentifier>
               <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
             </TypeIdentifier>
@@ -122,12 +115,5 @@
       <FileName>EquipmentManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="My_RPG_Game.AvailableArmor">
-    <Position X="15.25" Y="0.5" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAQgAAAA=</HashCode>
-      <FileName>ArmorTypes.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
