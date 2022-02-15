@@ -428,47 +428,6 @@ namespace My_RPG_Game
                     Console.WriteLine("Intelligence: " + Intelligence);
                 }
             }
-
-            public static void ChooseCharacter(string CharacterClass)
-            {
-                try
-                {
-                    Console.WriteLine("Character selected: " + CharacterClass);
-                    switch (CharacterClass)
-                    {
-                        case "Mage":
-                            Charactertypes.Mage MyMage = new Charactertypes.Mage();
-                            MyMage.BaseStats();
-                            break;
-                        case "Ranger":
-                            Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
-                            MyRanger.BaseStats();
-                            break;
-                        case "Rogue":
-                            Charactertypes.Rogue MyRogue = new Charactertypes.Rogue();
-                            MyRogue.BaseStats();
-                            break;
-                        case "Warrior":
-                            Charactertypes.Warrior MyWarrior = new Charactertypes.Warrior();
-                            MyWarrior.BaseStats();
-                            break;
-                        default:
-                            Console.WriteLine("You did not selected any available Character Type");
-                            break;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //Exception NOT YET DONE
-                    Console.WriteLine(ex.Message);
-                }
-                finally
-                {
-                    Console.WriteLine("-----------------------------");
-                    Console.WriteLine("End of our Character Selector");
-                    Console.WriteLine("-----------------------------");
-                }
-            }
         }       
     }
 }
