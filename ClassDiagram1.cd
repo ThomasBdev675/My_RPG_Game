@@ -55,6 +55,21 @@
               <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
             </TypeIdentifier>
           </Class>
+          <Enum Name="My_RPG_Game.CharacterManager.Charactertypes.AvailableSlots">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Enum Name="My_RPG_Game.CharacterManager.Charactertypes.AllowedWeapons">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Enum Name="My_RPG_Game.CharacterManager.Charactertypes.AllowedArmor">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
         </NestedTypes>
         <TypeIdentifier>
           <NewMemberFileName>CharacterManager.cs</NewMemberFileName>

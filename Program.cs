@@ -13,14 +13,11 @@ namespace My_RPG_Game
             //CharacterSelector
             CharacterManager.Charactertypes.ChooseCharacter("Mage");
             //EquipmentManager Armor           
-            EquipmentManager.ArmorManager.ArmorTypes. ChooseArmorEquipment(2);
+            EquipmentManager.ArmorManager.ArmorTypes. ChooseArmorEquipment(1);
             //EquipmentManager Weapon
-            EquipmentManager.WeaponManager.WeaponTypes.ChooseWeaponEquipment(5);       
+            EquipmentManager.WeaponManager.WeaponTypes.ChooseWeaponEquipment(1);
             
             
-
-
-            //Dictionary next to do                      
 
 
         }

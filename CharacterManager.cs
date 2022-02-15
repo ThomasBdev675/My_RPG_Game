@@ -6,30 +6,74 @@ using System.Threading.Tasks;
 
 namespace My_RPG_Game
 {
-    class CharacterManager
+    public class CharacterManager
     {
-
         public class Charactertypes
         {
+            /// Using Enumerator for a list of overall AvailableSlots
+            public enum AvailableSlots
+            {
+                Head,
+                Body,
+                Legs,
+                Weapon,
+            }
+
+            /// Using Enumerator for a list of overall AllowedWeapons
+            public enum AllowedWeapons
+            {
+                Axes,
+                Bows,
+                Daggers,
+                Hammers,
+                Staffs,
+                Swords,
+                Wands,
+            }
+
+            /// Using Enumerator for a list of overall AllowedArmors  
+            public enum AllowedArmor
+            {
+                Cloth,
+                Leather,
+                Mail,
+                Plate,
+            }
+            
+            /// Dictionaries added to handle Characters Available Slots, AllowedWeapons and AllowedArmors            
+            protected static Dictionary<AvailableSlots, string> CharacterAvailableSlots = new Dictionary<AvailableSlots, string>();
+            protected static Dictionary<AllowedWeapons, string> CharacterAllowedWeapons = new Dictionary<AllowedWeapons, string>();
+            protected static Dictionary<AllowedArmor, string> CharacterAllowedArmors = new Dictionary<AllowedArmor, string>();
+
             ///Public class to define Mage class and their attributes
             public class Mage : PrimaryAttribute
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
-                protected string AllowedArmor { get; set; }
-                protected string AllowedWeapons { get; set; }
                 protected double Damage { get; set; }
 
                 ///Constructor for the Mage class to define their attributes
                 public Mage()
                 {
+                    ///Setting base stats
                     Lvl += 1;
-                    AllowedArmor = "Cloth";
-                    AllowedWeapons = "Staff, Wand";
                     Damage += 0;
                     Strenght += 1;
                     Dexterity += 1;
                     Intelligence += 8;
+
+                    ///Defining available Slots for Character using Dictionary
+                    CharacterAvailableSlots.Add(AvailableSlots.Head, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Body, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Legs, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Weapon, "Empty");
+
+                    ///Defining allowed Weapons for Character using Dictionary
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Staffs, "Empty");
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Wands, "Empty");
+
+                    ///Defining allowed Armor for Character using Dictionary
+                    CharacterAllowedArmors.Add(AllowedArmor.Cloth, "Empty");
                 }
 
                 /// Overriding method to show primary stats             
@@ -51,6 +95,11 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                     Console.WriteLine("Damage: " + Damage);
+                    Console.WriteLine("Available Head Slot:");
+                    Console.WriteLine("");
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("End of Base stats:");
+                    Console.WriteLine("--------------------");
                 }
 
                 ///Public override method to calculate provided stats
@@ -79,7 +128,7 @@ namespace My_RPG_Game
                     Console.WriteLine("Strenght: " + Strenght);
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
-
+                    //CompleteAttributeCalculation missing
                     Lvl += 1;
                     Strenght += 1 * 1;
                     Dexterity += 1 * 1;
@@ -93,7 +142,6 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                 }
-
             }
 
             ///Public class to define Ranger class and their attributes
@@ -101,20 +149,30 @@ namespace My_RPG_Game
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
-                protected string AllowedArmor { get; set; }
-                protected string AllowedWeapons { get; set; }
                 protected double Damage { get; set; }
 
                 ///Constructor for the Mage class to define their attributes
                 public Ranger()
                 {
+                    ///Setting base stats
                     Lvl += 1;
-                    AllowedArmor = "Leather, Mail";
-                    AllowedWeapons = "Bow";
                     Damage += 0;
                     Strenght += 1;
                     Dexterity += 7;
                     Intelligence += 1;
+
+                    ///Defining available Slots for Character using Dictionary
+                    CharacterAvailableSlots.Add(AvailableSlots.Head, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Body, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Legs, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Weapon, "Empty");
+
+                    ///Defining allowed Weapons for Character using Dictionary
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Bows, "Empty");
+
+                    ///Defining allowed Armor for Character using Dictionary
+                    CharacterAllowedArmors.Add(AllowedArmor.Leather, "Empty");
+                    CharacterAllowedArmors.Add(AllowedArmor.Mail, "Empty");
                 }
 
                 /// Overriding method to show primary stats
@@ -185,20 +243,31 @@ namespace My_RPG_Game
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
-                protected string AllowedArmor { get; set; }
-                protected string AllowedWeapons { get; set; }
                 protected double Damage { get; set; }
 
                 ///Constructor for the Mage class to define their attributes
                 public Rogue()
                 {
+                    /// Seeting base stats
                     Lvl += 1;
-                    AllowedArmor = "Leather, Mail";
-                    AllowedWeapons = "Dagger, Sword";
                     Damage += 0;
                     Strenght += 2;
                     Dexterity += 6;
                     Intelligence += 1;
+
+                    ///Defining available Slots for Character using Dictionary
+                    CharacterAvailableSlots.Add(AvailableSlots.Head, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Body, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Legs, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Weapon, "Empty");
+
+                    ///Defining allowed Weapons for Character using Dictionary
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Daggers, "Empty");
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Swords, "Empty");
+
+                    ///Defining allowed Armor for Character using Dictionary
+                    CharacterAllowedArmors.Add(AllowedArmor.Leather, "Empty");
+                    CharacterAllowedArmors.Add(AllowedArmor.Mail, "Empty");
                 }
 
                 /// Overriding method to show primary stats
@@ -269,20 +338,32 @@ namespace My_RPG_Game
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
-                protected string AllowedArmor { get; set; }
-                protected string AllowedWeapons { get; set; }
                 protected double Damage { get; set; }
 
                 ///Constructor for the Mage class to define their attributes
                 public Warrior()
                 {
+                    /// Setting base stats
                     Lvl += 1;
-                    AllowedArmor = "Mail, Plate";
-                    AllowedWeapons = "Axe, Hammer, Sword";
                     Damage += 0;
                     Strenght += 5;
                     Dexterity += 2;
                     Intelligence += 1;
+
+                    ///Defining available Slots for Character using Dictionary
+                    CharacterAvailableSlots.Add(AvailableSlots.Head, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Body, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Legs, "Empty");
+                    CharacterAvailableSlots.Add(AvailableSlots.Weapon, "Empty");
+
+                    ///Defining allowed Weapons for Character using Dictionary
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Axes, "Empty");
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Hammers, "Empty");
+                    CharacterAllowedWeapons.Add(AllowedWeapons.Swords, "Empty");
+
+                    ///Defining allowed Armor for Character using Dictionary
+                    CharacterAllowedArmors.Add(AllowedArmor.Mail, "Empty");
+                    CharacterAllowedArmors.Add(AllowedArmor.Plate, "Empty");
                 }
 
                 /// Overriding method to show primary stats
