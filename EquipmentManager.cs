@@ -8,7 +8,7 @@ namespace My_RPG_Game
 {
     public class EquipmentManager
     {
-        public class ArmorManager
+        public class ArmorManager : PrimaryAttribute
         {
             protected enum AvailableArmor
             {
