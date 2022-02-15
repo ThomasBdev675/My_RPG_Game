@@ -12,7 +12,7 @@ namespace My_RPG_Game
         public class Charactertypes
         {
             ///Public class to define Mage class and their attributes
-            public class Mage : PrimaryAttribute
+            protected class Mage : PrimaryAttribute
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
@@ -97,7 +97,7 @@ namespace My_RPG_Game
             }
 
             ///Public class to define Ranger class and their attributes
-            public class Ranger : PrimaryAttribute
+            protected class Ranger : PrimaryAttribute
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
@@ -181,7 +181,7 @@ namespace My_RPG_Game
             }
 
             ///Public class to define Rogue class and their attributes
-            public class Rogue : PrimaryAttribute
+            protected class Rogue : PrimaryAttribute
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
@@ -265,7 +265,7 @@ namespace My_RPG_Game
             }
 
             ///Public class to define Warrior class and their attributes
-            public class Warrior : PrimaryAttribute
+            protected class Warrior : PrimaryAttribute
             {
                 protected string Name { get; set; }
                 protected int Lvl { get; set; }
