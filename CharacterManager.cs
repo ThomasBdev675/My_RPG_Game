@@ -357,15 +357,19 @@ namespace My_RPG_Game
                     {
                         case "Mage":
                             Charactertypes.Mage MyMage = new Charactertypes.Mage();
+                            MyMage.BaseStats();
                             break;
                         case "Ranger":
                             Charactertypes.Ranger MyRanger = new Charactertypes.Ranger();
+                            MyRanger.BaseStats();
                             break;
                         case "Rogue":
                             Charactertypes.Rogue MyRogue = new Charactertypes.Rogue();
+                            MyRogue.BaseStats();
                             break;
                         case "Warrior":
                             Charactertypes.Warrior MyWarrior = new Charactertypes.Warrior();
+                            MyWarrior.BaseStats();
                             break;
                         default:
                             Console.WriteLine("You did not selected any available Character Type");

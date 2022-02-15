@@ -20,7 +20,7 @@ namespace My_RPG_Game
 
             public class ArmorTypes : Item
             {
-                protected void EquipArmor(int availableArmor)
+                public void EquipArmor(int availableArmor)
                 {
                     AvailableArmor selectedArmor = (AvailableArmor)availableArmor;
                     Console.WriteLine(selectedArmor);
