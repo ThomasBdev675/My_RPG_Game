@@ -7,40 +7,8 @@
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My_RPG_Game.Charactertypes">
-    <Position X="4.25" Y="0.5" Width="2.25" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <NestedTypes>
-      <Class Name="My_RPG_Game.Charactertypes.Mage">
-        <TypeIdentifier>
-          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.Charactertypes.Ranger">
-        <TypeIdentifier>
-          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.Charactertypes.Rogue">
-        <TypeIdentifier>
-          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="My_RPG_Game.Charactertypes.Warrior">
-        <TypeIdentifier>
-          <NewMemberFileName>CharacterClasses.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CharacterClasses.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="My_RPG_Game.PrimaryAttribute">
-    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Position X="6.25" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -50,17 +18,52 @@
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.Item">
-    <Position X="6.75" Y="0.5" Width="1.5" />
+    <Position X="6.25" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My_RPG_Game.CharacterSelector">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+  <Class Name="My_RPG_Game.CharacterManager">
+    <Position X="2.5" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="My_RPG_Game.CharacterManager.Charactertypes">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Class Name="My_RPG_Game.CharacterManager.Charactertypes.Mage">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="My_RPG_Game.CharacterManager.Charactertypes.Ranger">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="My_RPG_Game.CharacterManager.Charactertypes.Rogue">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+          <Class Name="My_RPG_Game.CharacterManager.Charactertypes.Warrior">
+            <TypeIdentifier>
+              <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
+        <TypeIdentifier>
+          <NewMemberFileName>CharacterManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>CharacterSelector.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CharacterManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.EquipmentManager">
