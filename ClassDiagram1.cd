@@ -39,17 +39,6 @@
       <FileName>CharacterClasses.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="My_RPG_Game.WeaponTypes">
-    <Position X="9.75" Y="2.5" Width="2" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAACABAAAAAAAAAIAAAAAAIAAAAA=</HashCode>
-      <FileName>WeaponTypes.cs</FileName>
-      <NewMemberFileName>Weapontypes.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="My_RPG_Game.PrimaryAttribute">
     <Position X="2.5" Y="1.75" Width="1.5" />
     <Compartments>
@@ -90,12 +79,39 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Class Name="My_RPG_Game.EquipmentManager.WeaponManager">
+      <Class Name="My_RPG_Game.EquipmentManager.ArmorManager">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <NestedTypes>
+          <Enum Name="My_RPG_Game.EquipmentManager.ArmorManager.AvailableArmor">
+            <TypeIdentifier>
+              <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Class Name="My_RPG_Game.EquipmentManager.ArmorManager.ArmorTypes">
+            <TypeIdentifier>
+              <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
         <TypeIdentifier>
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Class Name="My_RPG_Game.EquipmentManager.ArmorManager">
+      <Class Name="My_RPG_Game.EquipmentManager.WeaponManager">
+        <NestedTypes>
+          <Enum Name="My_RPG_Game.EquipmentManager.WeaponManager.AvailableWeapons" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Enum>
+          <Class Name="My_RPG_Game.EquipmentManager.WeaponManager.WeaponTypes" Collapsed="true">
+            <TypeIdentifier>
+              <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+            </TypeIdentifier>
+          </Class>
+        </NestedTypes>
         <TypeIdentifier>
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -111,13 +127,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAAAAAQgAAAA=</HashCode>
       <FileName>ArmorTypes.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="My_RPG_Game.AvailableWeapons">
-    <Position X="15.25" Y="2.25" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQQAQAEAAAAAACBAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>WeaponTypes.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
