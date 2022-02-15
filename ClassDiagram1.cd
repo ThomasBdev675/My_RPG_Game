@@ -67,7 +67,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.EquipmentManager">
-    <Position X="8.5" Y="0.5" Width="2.5" />
+    <Position X="8.5" Y="0.5" Width="3.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
