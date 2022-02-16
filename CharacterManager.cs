@@ -142,6 +142,15 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                 }
+                public static void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
+                {
+                    Console.WriteLine(weaponTypes.Slot);  
+                }
+
+                public static void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
+                {
+                    Console.WriteLine(armorTypes.Slot);
+                }
             }
 
             ///Public class to define Ranger class and their attributes

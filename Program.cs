@@ -3,13 +3,7 @@
 namespace My_RPG_Game
 {
     class Program
-    {
-
-        public static  void EquipMyselectedWeapon(WeaponManager.WeaponTypes weaponTypes)
-        {
-            Console.WriteLine(weaponTypes.RequiredLvl);
-            Console.WriteLine("Test");
-        }
+    {        
 
         static void Main(string[] args)
         {
@@ -24,14 +18,18 @@ namespace My_RPG_Game
             //ShowBaseStats
             MyMage.BaseStats();
 
+            //Levelup
+            MyMage.LevelUp();
+
             //Create Armor
             ArmorManager.ArmorTypes MyClothArmor = new ArmorManager.ArmorTypes()
             {
-                Name = "Cloth Armor",
+                Name = "Cloth",
                 RequiredLvl = 1,
                 Slot = "Slot",
+                MyArmor = ArmorManager.AvailableArmor.Cloth,
             };
-            MyClothArmor.SelectArmor(1);
+           
             Console.WriteLine("Armor Name: " + MyClothArmor.Name);
             Console.WriteLine("Armor required lvl: " + MyClothArmor.RequiredLvl);
             Console.WriteLine("Armor Slot: " + MyClothArmor.Slot);
@@ -44,15 +42,16 @@ namespace My_RPG_Game
                 Slot = "Slot",
                 BaseDamage = 1,
                 AttacksPerSecond = 1,
+                MyWeapons = WeaponManager.AvailableWeapons.Axes,
             };
-            MyWeapon.SelectWeapon(1);
+           
             Console.WriteLine("Weapon Name: " + MyWeapon.Name);
             Console.WriteLine("Weapon required lvl: " + MyWeapon.RequiredLvl);
             Console.WriteLine("Weapon Slot: " + MyWeapon.Slot);
             Console.WriteLine("Weapon base damage: " + MyWeapon.RequiredLvl);
             Console.WriteLine("Weapon attack speed: " + MyWeapon.Slot);
 
-            EquipMyselectedWeapon(MyWeapon);
+          CharacterManager.Charactertypes.Mage.EquipMyWeapon(MyWeapon);
 
 
             
