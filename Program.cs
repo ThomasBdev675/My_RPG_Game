@@ -12,36 +12,39 @@ namespace My_RPG_Game
             Console.WriteLine("-------------------------------");
 
             //Creating Character
-            CharacterManager.Charactertypes.Mage MyMage = new CharacterManager.Charactertypes.Mage();
+            CharacterManager.Charactertypes.Warrior MyWarrior = new CharacterManager.Charactertypes.Warrior()
+            {
+                Name = "MyWarrior",
+            };
 
             //ShowBaseStats
-            MyMage.BaseStats();
+            MyWarrior.BaseStats();
 
             //Levelup
-            MyMage.LevelUp();
+            MyWarrior.LevelUp();
 
             //Create Weapon
             WeaponManager.WeaponTypes MyWeapon = new WeaponManager.WeaponTypes()
             {
-                Name = "Staffs",
-                RequiredLvl = 2,
+                Name = "Sword",
+                RequiredLvl = 1,
                 Slot = WeaponManager.AllowedWeaponsSlots.Weapon,
                 BaseDamage = 1,
                 AttacksPerSecond = 1,
-                MyWeapons = CharacterManager.Charactertypes.AllowedWeapons.Staffs,
+                MyWeapons = CharacterManager.Charactertypes.AllowedWeapons.Swords,
             };
 
             //Create Cloth Armor
             ArmorManager.ArmorTypes MyClothArmor = new ArmorManager.ArmorTypes()
             {
-                Name = "Cloth",
+                Name = "Mail",
                 RequiredLvl = 1,
                 Slot = ArmorManager.AllowedArmorSlots.Head,  
-                MyArmor = CharacterManager.Charactertypes.AllowedArmor.Cloth,
+                MyArmor = CharacterManager.Charactertypes.AllowedArmor.Mail,
             };
 
-            MyMage.EquipMyWeapon(MyWeapon);
-            MyMage.EquipMyArmor(MyClothArmor);
+            MyWarrior.EquipMyWeapon(MyWeapon);
+            MyWarrior.EquipMyArmor(MyClothArmor);
 
         }
     }    

@@ -146,5 +146,19 @@
       <FileName>NotAllowedArmor.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="My_RPG_Game.MissingRequiredLevel">
+    <Position X="13.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MissingRequiredLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.UsedSlotException">
+    <Position X="13.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsedSlotException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
