@@ -9,13 +9,6 @@ namespace My_RPG_Game
 
     public class ArmorManager : PrimaryAttribute
     {
-        public enum AvailableArmor
-        {
-            Cloth,
-            Leather,
-            Mail,
-            Plate,
-        }
 
         public enum AllowedArmorSlots
         {
@@ -33,16 +26,6 @@ namespace My_RPG_Game
 
     public class WeaponManager
     {
-        public enum AvailableWeapons
-        {
-            Axes,
-            Bows,
-            Daggers,
-            Hammers,
-            Staffs,
-            Swords,
-            Wands,
-        }
 
         public enum AllowedWeaponsSlots
         {

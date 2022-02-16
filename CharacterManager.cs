@@ -150,11 +150,11 @@ namespace My_RPG_Game
                     Console.WriteLine("--------------------");
                     Console.WriteLine("Equip Weapon Method:");
                     Console.WriteLine("--------------------");
-                    Console.WriteLine(weaponTypes.Slot);
-                    Console.WriteLine(weaponTypes.RequiredLvl);
-                    Console.WriteLine(weaponTypes.Name);
-                    Console.WriteLine(weaponTypes.MyWeapons);
-                    Console.WriteLine("--------------------");
+                    //Console.WriteLine(weaponTypes.Slot);
+                    //Console.WriteLine(weaponTypes.RequiredLvl);
+                    //Console.WriteLine(weaponTypes.Name);
+                    //Console.WriteLine(weaponTypes.MyWeapons);
+                    //Console.WriteLine("--------------------");
 
                     if (weaponTypes.RequiredLvl > Lvl) throw new ArgumentException();
                     string myAvailableSlot = CharacterAvailableSlots[AvailableSlots.Weapon];
@@ -162,11 +162,13 @@ namespace My_RPG_Game
                     string checkSlot = weaponTypes.Slot.ToString();
                     bool weaponAllowed = false;
 
-                    
+                    ///Checking if weapon to equip is allowed for the character within the dictionary
                     for (int i = 0; i < CharacterAllowedWeapons.Count; i++)
                     {
+                        Console.WriteLine(CharacterAllowedWeapons[i]);
                         if (CharacterAllowedWeapons[i].Equals(weaponTypes.MyWeapons))
                         {
+                            Console.WriteLine(CharacterAllowedWeapons[i]);
                             weaponAllowed = true;
                             break;
                         }
@@ -231,6 +233,7 @@ namespace My_RPG_Game
                     Console.WriteLine(armorTypes.Slot);
                     Console.WriteLine(armorTypes.RequiredLvl);
                     Console.WriteLine(armorTypes.Name);
+                    Console.WriteLine(armorTypes.MyArmor);
                     Console.WriteLine("--------------------");
 
                     if (armorTypes.RequiredLvl > Lvl) throw new ArgumentException();
@@ -238,80 +241,101 @@ namespace My_RPG_Game
                     string myAvailableHeadSlot = CharacterAvailableSlots[AvailableSlots.Head];
                     string myAvailableLegsSlot = CharacterAvailableSlots[AvailableSlots.Legs];
 
-                    Console.WriteLine(myAvailableBodySlot);
-                    Console.WriteLine(myAvailableHeadSlot);
-                    Console.WriteLine(myAvailableLegsSlot);
+                    //Console.WriteLine(myAvailableBodySlot);
+                    //Console.WriteLine(myAvailableHeadSlot);
+                    //Console.WriteLine(myAvailableLegsSlot);
 
                     string checkSlot = armorTypes.Slot.ToString();
+                    bool armorAllowed = false;
 
-                    try
+
+                    ///Checking if armor to equip is allowed within the dictionary
+                    for (int i = 0; i < CharacterAllowedArmors.Count; i++)
                     {
-                        switch (checkSlot)
+                        if (CharacterAllowedArmors[i].Equals(armorTypes.MyArmor))
                         {
-                            case "Body":
-                                Console.WriteLine("Body Slot provided");
-                                Console.WriteLine(myAvailableBodySlot);        
-
-                                if (myAvailableBodySlot == "Empty")
-                                {
-                                    Console.WriteLine("Peronal Body Slot is 'Empty'");
-                                    CharacterAvailableSlots[AvailableSlots.Body] = armorTypes.Name;
-                                    Console.WriteLine("New euipped Body armor is set to " + armorTypes.Name);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Your Body Slot is already used, You cant equip a second armor on the same slot");
-                                    throw new ArgumentException();
-                                }
-
-                                break;
-                            case "Head":
-                                Console.WriteLine("Head Slot provided");
-                                Console.WriteLine(myAvailableHeadSlot);
-
-                                if (myAvailableHeadSlot == "Empty")
-                                {
-                                    Console.WriteLine("Peronal Head Slot is 'Empty'");
-                                    CharacterAvailableSlots[AvailableSlots.Head] = armorTypes.Name;
-                                    Console.WriteLine("New euipped armor is set to " + armorTypes.Name);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Your Head Slot is already used, You cant equip a second armor on the same slot");
-                                    throw new ArgumentException();
-                                }
-                                break;
-                                
-                            case "Legs":
-                                Console.WriteLine("Legs Slot provided");
-                                Console.WriteLine(myAvailableLegsSlot);
-
-                                if (myAvailableLegsSlot == "Empty")
-                                {
-                                    Console.WriteLine("Peronal Legs Slot is 'Empty'");
-                                    CharacterAvailableSlots[AvailableSlots.Legs] = armorTypes.Name;
-                                    Console.WriteLine("New euipped Legs armor is set to " + armorTypes.Name);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Your Legs Slot is already used, You cant equip a second armor on the same slot");
-                                    throw new ArgumentException();
-                                }
-                                break;
-
-                            case "Weapon":
-                                Console.WriteLine("Weapon Slot provided");
-                                Console.WriteLine("You are trying to equip an Armor on your Weapon Slot. You cant equip an armor using the Weapon Slot");
-                                throw new ArgumentException();
-
-                            default:
-                                Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'ArmorManager.AllowedArmorSlots'");
-                                throw new ArgumentException();
+                            armorAllowed = true;
+                            break;
                         }
                     }
-                    catch (Exception)
+
+
+                    if (armorAllowed == true)
+                    {                    
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine(myAvailableBodySlot);        
+
+                                    if (myAvailableBodySlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Body Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Body] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Body armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Body Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine(myAvailableHeadSlot);
+
+                                    if (myAvailableHeadSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Head Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Head] = armorTypes.Name;
+                                        Console.WriteLine("New euipped armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Head Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+                                
+                                case "Legs":
+                                    Console.WriteLine("Legs Slot provided");
+                                    Console.WriteLine(myAvailableLegsSlot);
+
+                                    if (myAvailableLegsSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Legs Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Legs] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Legs armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Legs Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine("You are trying to equip an Armor on your Weapon Slot. You cant equip an armor using the Weapon Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'ArmorManager.AllowedArmorSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+                    }
+                    else
                     {
-                        throw;
+                        Console.WriteLine("Armor is not allowed");
+                        throw new NotAllowedArmor();
                     }
                 }
             }
@@ -416,6 +440,201 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                 }
+
+                public void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Weapon Method:");
+                    Console.WriteLine("--------------------");
+                    //Console.WriteLine(weaponTypes.Slot);
+                    //Console.WriteLine(weaponTypes.RequiredLvl);
+                    //Console.WriteLine(weaponTypes.Name);
+                    //Console.WriteLine(weaponTypes.MyWeapons);
+                    //Console.WriteLine("--------------------");
+
+                    if (weaponTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableSlot = CharacterAvailableSlots[AvailableSlots.Weapon];
+                    //Console.WriteLine(myAvailableSlot);
+                    string checkSlot = weaponTypes.Slot.ToString();
+                    bool weaponAllowed = false;
+
+                    ///Checking if weapon to equip is allowed for the character within the dictionary
+                    for (int i = 0; i < CharacterAllowedWeapons.Count; i++)
+                    {
+                        Console.WriteLine(CharacterAllowedWeapons[i]);
+                        if (CharacterAllowedWeapons[i].Equals(weaponTypes.MyWeapons))
+                        {
+                            Console.WriteLine(CharacterAllowedWeapons[i]);
+                            weaponAllowed = true;
+                            break;
+                        }
+                    }
+
+                    if (weaponAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine(myAvailableSlot);
+                                    if (myAvailableSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Weapon Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Weapon] = weaponTypes.Name;
+                                        Console.WriteLine("New euipped Weapon is set to " + weaponTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Weapon Slot is already used, You cant equip a second weapon on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Legs":
+                                    throw new WrongSlotException();
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Body Slot. You cant equip a weapon using the Body Slot");
+                                    throw new ArgumentException();
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Head Slot. You cant equip a weapon using the Head Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please choose one of the available slot from 'WeaponManager.AllowedWeaponsSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Weapon is not allowed");
+                        throw new NotAllowedWeapon();
+                    }
+                }
+
+                public void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Armor Method:");
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine(armorTypes.Slot);
+                    Console.WriteLine(armorTypes.RequiredLvl);
+                    Console.WriteLine(armorTypes.Name);
+                    Console.WriteLine(armorTypes.MyArmor);
+                    Console.WriteLine("--------------------");
+
+                    if (armorTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableBodySlot = CharacterAvailableSlots[AvailableSlots.Body];
+                    string myAvailableHeadSlot = CharacterAvailableSlots[AvailableSlots.Head];
+                    string myAvailableLegsSlot = CharacterAvailableSlots[AvailableSlots.Legs];
+
+                    //Console.WriteLine(myAvailableBodySlot);
+                    //Console.WriteLine(myAvailableHeadSlot);
+                    //Console.WriteLine(myAvailableLegsSlot);
+
+                    string checkSlot = armorTypes.Slot.ToString();
+                    bool armorAllowed = false;
+
+
+                    ///Checking if armor to equip is allowed within the dictionary
+                    for (int i = 0; i < CharacterAllowedArmors.Count; i++)
+                    {
+                        if (CharacterAllowedArmors[i].Equals(armorTypes.MyArmor))
+                        {
+                            armorAllowed = true;
+                            break;
+                        }
+                    }
+
+
+                    if (armorAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                            case "Body":
+                                Console.WriteLine("Body Slot provided");
+                                Console.WriteLine(myAvailableBodySlot);
+
+                                if (myAvailableBodySlot == "Empty")
+                                {
+                                    Console.WriteLine("Peronal Body Slot is 'Empty'");
+                                    CharacterAvailableSlots[AvailableSlots.Body] = armorTypes.Name;
+                                    Console.WriteLine("New euipped Body armor is set to " + armorTypes.Name);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Your Body Slot is already used, You cant equip a second armor on the same slot");
+                                    throw new ArgumentException();
+                                }
+
+                                break;
+                            case "Head":
+                                Console.WriteLine("Head Slot provided");
+                                Console.WriteLine(myAvailableHeadSlot);
+
+                                if (myAvailableHeadSlot == "Empty")
+                                {
+                                    Console.WriteLine("Peronal Head Slot is 'Empty'");
+                                    CharacterAvailableSlots[AvailableSlots.Head] = armorTypes.Name;
+                                    Console.WriteLine("New euipped armor is set to " + armorTypes.Name);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Your Head Slot is already used, You cant equip a second armor on the same slot");
+                                    throw new ArgumentException();
+                                }
+                                break;
+
+                            case "Legs":
+                                Console.WriteLine("Legs Slot provided");
+                                Console.WriteLine(myAvailableLegsSlot);
+
+                                if (myAvailableLegsSlot == "Empty")
+                                {
+                                    Console.WriteLine("Peronal Legs Slot is 'Empty'");
+                                    CharacterAvailableSlots[AvailableSlots.Legs] = armorTypes.Name;
+                                    Console.WriteLine("New euipped Legs armor is set to " + armorTypes.Name);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Your Legs Slot is already used, You cant equip a second armor on the same slot");
+                                    throw new ArgumentException();
+                                }
+                                break;
+
+                            case "Weapon":
+                                Console.WriteLine("Weapon Slot provided");
+                                Console.WriteLine("You are trying to equip an Armor on your Weapon Slot. You cant equip an armor using the Weapon Slot");
+                                throw new ArgumentException();
+
+                            default:
+                                Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'ArmorManager.AllowedArmorSlots'");
+                                throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Armor is not allowed");
+                        throw new NotAllowedArmor();
+                    }
+                }
+
             }
 
             ///Public class to define Rogue class and their attributes
@@ -518,6 +737,199 @@ namespace My_RPG_Game
                     Console.WriteLine("Strenght: " + Strenght);
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
+                }
+                public void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Weapon Method:");
+                    Console.WriteLine("--------------------");
+                    //Console.WriteLine(weaponTypes.Slot);
+                    //Console.WriteLine(weaponTypes.RequiredLvl);
+                    //Console.WriteLine(weaponTypes.Name);
+                    //Console.WriteLine(weaponTypes.MyWeapons);
+                    //Console.WriteLine("--------------------");
+
+                    if (weaponTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableSlot = CharacterAvailableSlots[AvailableSlots.Weapon];
+                    //Console.WriteLine(myAvailableSlot);
+                    string checkSlot = weaponTypes.Slot.ToString();
+                    bool weaponAllowed = false;
+
+                    ///Checking if weapon to equip is allowed for the character within the dictionary
+                    for (int i = 0; i < CharacterAllowedWeapons.Count; i++)
+                    {
+                        Console.WriteLine(CharacterAllowedWeapons[i]);
+                        if (CharacterAllowedWeapons[i].Equals(weaponTypes.MyWeapons))
+                        {
+                            Console.WriteLine(CharacterAllowedWeapons[i]);
+                            weaponAllowed = true;
+                            break;
+                        }
+                    }
+
+                    if (weaponAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine(myAvailableSlot);
+                                    if (myAvailableSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Weapon Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Weapon] = weaponTypes.Name;
+                                        Console.WriteLine("New euipped Weapon is set to " + weaponTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Weapon Slot is already used, You cant equip a second weapon on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Legs":
+                                    throw new WrongSlotException();
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Body Slot. You cant equip a weapon using the Body Slot");
+                                    throw new ArgumentException();
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Head Slot. You cant equip a weapon using the Head Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please choose one of the available slot from 'WeaponManager.AllowedWeaponsSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Weapon is not allowed");
+                        throw new NotAllowedWeapon();
+                    }
+                }
+
+                public void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Armor Method:");
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine(armorTypes.Slot);
+                    Console.WriteLine(armorTypes.RequiredLvl);
+                    Console.WriteLine(armorTypes.Name);
+                    Console.WriteLine(armorTypes.MyArmor);
+                    Console.WriteLine("--------------------");
+
+                    if (armorTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableBodySlot = CharacterAvailableSlots[AvailableSlots.Body];
+                    string myAvailableHeadSlot = CharacterAvailableSlots[AvailableSlots.Head];
+                    string myAvailableLegsSlot = CharacterAvailableSlots[AvailableSlots.Legs];
+
+                    //Console.WriteLine(myAvailableBodySlot);
+                    //Console.WriteLine(myAvailableHeadSlot);
+                    //Console.WriteLine(myAvailableLegsSlot);
+
+                    string checkSlot = armorTypes.Slot.ToString();
+                    bool armorAllowed = false;
+
+
+                    ///Checking if armor to equip is allowed within the dictionary
+                    for (int i = 0; i < CharacterAllowedArmors.Count; i++)
+                    {
+                        if (CharacterAllowedArmors[i].Equals(armorTypes.MyArmor))
+                        {
+                            armorAllowed = true;
+                            break;
+                        }
+                    }
+
+
+                    if (armorAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine(myAvailableBodySlot);
+
+                                    if (myAvailableBodySlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Body Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Body] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Body armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Body Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine(myAvailableHeadSlot);
+
+                                    if (myAvailableHeadSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Head Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Head] = armorTypes.Name;
+                                        Console.WriteLine("New euipped armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Head Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+
+                                case "Legs":
+                                    Console.WriteLine("Legs Slot provided");
+                                    Console.WriteLine(myAvailableLegsSlot);
+
+                                    if (myAvailableLegsSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Legs Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Legs] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Legs armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Legs Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine("You are trying to equip an Armor on your Weapon Slot. You cant equip an armor using the Weapon Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'ArmorManager.AllowedArmorSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Armor is not allowed");
+                        throw new NotAllowedArmor();
+                    }
                 }
             }
 
@@ -622,6 +1034,199 @@ namespace My_RPG_Game
                     Console.WriteLine("Strenght: " + Strenght);
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
+                }
+                public void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Weapon Method:");
+                    Console.WriteLine("--------------------");
+                    //Console.WriteLine(weaponTypes.Slot);
+                    //Console.WriteLine(weaponTypes.RequiredLvl);
+                    //Console.WriteLine(weaponTypes.Name);
+                    //Console.WriteLine(weaponTypes.MyWeapons);
+                    //Console.WriteLine("--------------------");
+
+                    if (weaponTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableSlot = CharacterAvailableSlots[AvailableSlots.Weapon];
+                    //Console.WriteLine(myAvailableSlot);
+                    string checkSlot = weaponTypes.Slot.ToString();
+                    bool weaponAllowed = false;
+
+                    ///Checking if weapon to equip is allowed for the character within the dictionary
+                    for (int i = 0; i < CharacterAllowedWeapons.Count; i++)
+                    {
+                        Console.WriteLine(CharacterAllowedWeapons[i]);
+                        if (CharacterAllowedWeapons[i].Equals(weaponTypes.MyWeapons))
+                        {
+                            Console.WriteLine(CharacterAllowedWeapons[i]);
+                            weaponAllowed = true;
+                            break;
+                        }
+                    }
+
+                    if (weaponAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine(myAvailableSlot);
+                                    if (myAvailableSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Weapon Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Weapon] = weaponTypes.Name;
+                                        Console.WriteLine("New euipped Weapon is set to " + weaponTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Weapon Slot is already used, You cant equip a second weapon on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Legs":
+                                    throw new WrongSlotException();
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Body Slot. You cant equip a weapon using the Body Slot");
+                                    throw new ArgumentException();
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine("You are trying to equip a Weapon on your Head Slot. You cant equip a weapon using the Head Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please choose one of the available slot from 'WeaponManager.AllowedWeaponsSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Weapon is not allowed");
+                        throw new NotAllowedWeapon();
+                    }
+                }
+
+                public void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
+                {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Armor Method:");
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine(armorTypes.Slot);
+                    Console.WriteLine(armorTypes.RequiredLvl);
+                    Console.WriteLine(armorTypes.Name);
+                    Console.WriteLine(armorTypes.MyArmor);
+                    Console.WriteLine("--------------------");
+
+                    if (armorTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableBodySlot = CharacterAvailableSlots[AvailableSlots.Body];
+                    string myAvailableHeadSlot = CharacterAvailableSlots[AvailableSlots.Head];
+                    string myAvailableLegsSlot = CharacterAvailableSlots[AvailableSlots.Legs];
+
+                    //Console.WriteLine(myAvailableBodySlot);
+                    //Console.WriteLine(myAvailableHeadSlot);
+                    //Console.WriteLine(myAvailableLegsSlot);
+
+                    string checkSlot = armorTypes.Slot.ToString();
+                    bool armorAllowed = false;
+
+
+                    ///Checking if armor to equip is allowed within the dictionary
+                    for (int i = 0; i < CharacterAllowedArmors.Count; i++)
+                    {
+                        if (CharacterAllowedArmors[i].Equals(armorTypes.MyArmor))
+                        {
+                            armorAllowed = true;
+                            break;
+                        }
+                    }
+
+
+                    if (armorAllowed == true)
+                    {
+                        try
+                        {
+                            switch (checkSlot)
+                            {
+                                case "Body":
+                                    Console.WriteLine("Body Slot provided");
+                                    Console.WriteLine(myAvailableBodySlot);
+
+                                    if (myAvailableBodySlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Body Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Body] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Body armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Body Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+
+                                    break;
+                                case "Head":
+                                    Console.WriteLine("Head Slot provided");
+                                    Console.WriteLine(myAvailableHeadSlot);
+
+                                    if (myAvailableHeadSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Head Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Head] = armorTypes.Name;
+                                        Console.WriteLine("New euipped armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Head Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+
+                                case "Legs":
+                                    Console.WriteLine("Legs Slot provided");
+                                    Console.WriteLine(myAvailableLegsSlot);
+
+                                    if (myAvailableLegsSlot == "Empty")
+                                    {
+                                        Console.WriteLine("Peronal Legs Slot is 'Empty'");
+                                        CharacterAvailableSlots[AvailableSlots.Legs] = armorTypes.Name;
+                                        Console.WriteLine("New euipped Legs armor is set to " + armorTypes.Name);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Your Legs Slot is already used, You cant equip a second armor on the same slot");
+                                        throw new ArgumentException();
+                                    }
+                                    break;
+
+                                case "Weapon":
+                                    Console.WriteLine("Weapon Slot provided");
+                                    Console.WriteLine("You are trying to equip an Armor on your Weapon Slot. You cant equip an armor using the Weapon Slot");
+                                    throw new ArgumentException();
+
+                                default:
+                                    Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'ArmorManager.AllowedArmorSlots'");
+                                    throw new ArgumentException();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            throw;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Armor is not allowed");
+                        throw new NotAllowedArmor();
+                    }
                 }
             }
         }       
