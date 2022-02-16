@@ -17,6 +17,13 @@ namespace My_RPG_Game
             Plate,
         }
 
+        public enum AllowedArmorSlots
+        {
+            Head,
+            Body,
+            Legs,
+        }
+
 
         public class ArmorTypes : Item
         {
@@ -35,6 +42,11 @@ namespace My_RPG_Game
             Staffs,
             Swords,
             Wands,
+        }
+
+        public enum AllowedWeaponsSlots
+        {
+        Weapon,
         }
 
         public class WeaponTypes : Item

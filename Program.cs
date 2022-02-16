@@ -26,7 +26,7 @@ namespace My_RPG_Game
             {
                 Name = "Cloth",
                 RequiredLvl = 1,
-                Slot = "Slot",
+                Slot = ArmorManager.AllowedArmorSlots.Body,
                 MyArmor = ArmorManager.AvailableArmor.Cloth,
             };
            
@@ -37,9 +37,10 @@ namespace My_RPG_Game
             //Create Weapon
             WeaponManager.WeaponTypes MyWeapon = new WeaponManager.WeaponTypes()
             {
-                Name = "Axe Weapon",
-                RequiredLvl = 1,
-                Slot = "Slot",
+                Name = "Axe",
+                RequiredLvl = 2,
+                Slot = "Head",
+                //Slot = WeaponManager.AllowedWeaponsSlots.Weapon,
                 BaseDamage = 1,
                 AttacksPerSecond = 1,
                 MyWeapons = WeaponManager.AvailableWeapons.Axes,
@@ -51,10 +52,12 @@ namespace My_RPG_Game
             Console.WriteLine("Weapon base damage: " + MyWeapon.RequiredLvl);
             Console.WriteLine("Weapon attack speed: " + MyWeapon.Slot);
 
-          CharacterManager.Charactertypes.Mage.EquipMyWeapon(MyWeapon);
+            MyMage.EquipMyWeapon(MyWeapon);
+            MyMage.EquipMyArmor(MyClothArmor);
+            MyMage.EquipMyWeapon(MyWeapon); 
 
 
-            
+
 
 
 

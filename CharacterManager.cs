@@ -95,8 +95,11 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                     Console.WriteLine("Damage: " + Damage);
-                    Console.WriteLine("Available Head Slot:");
-                    Console.WriteLine("");
+                    Console.WriteLine("Available Slots:");
+                    Console.WriteLine(AvailableSlots.Body);
+                    Console.WriteLine(AvailableSlots.Head);
+                    Console.WriteLine(AvailableSlots.Legs);
+                    Console.WriteLine(AvailableSlots.Weapon);
                     Console.WriteLine("--------------------");
                     Console.WriteLine("End of Base stats:");
                     Console.WriteLine("--------------------");
@@ -142,14 +145,73 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                 }
-                public static void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
+                public void EquipMyWeapon(WeaponManager.WeaponTypes weaponTypes)
                 {
-                    Console.WriteLine(weaponTypes.Slot);  
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Weapon Method:");
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine(weaponTypes.Slot);
+                    Console.WriteLine(weaponTypes.RequiredLvl);
+                    Console.WriteLine(weaponTypes.Name);
+                    Console.WriteLine("--------------------");
+
+                    if (weaponTypes.RequiredLvl > Lvl) throw new ArgumentException();
+                    string myAvailableSlot = CharacterAvailableSlots[AvailableSlots.Weapon];   
+                    Console.WriteLine(myAvailableSlot);
+                    string checkSlot = weaponTypes.Slot.ToString();
+
+                    try
+                    {
+                        switch (checkSlot)
+                        {
+                            case "Weapon":
+                                Console.WriteLine("Weapon Slot provided");
+                                Console.WriteLine(myAvailableSlot);
+                                if (myAvailableSlot == "Empty")
+                                {
+                                    Console.WriteLine("Peronal Weapon Slot is 'Empty'");
+                                    CharacterAvailableSlots[AvailableSlots.Weapon] = weaponTypes.Name;
+                                    Console.WriteLine("New euipped Weapon is set to " + weaponTypes.Name);
+                                }
+                                else 
+                                {
+                                    Console.WriteLine("Your Weapon Slot is already used, You cant equip a second weapon");
+                                    throw new ArgumentException();
+                                }
+
+                                break;
+                            case "Legs":
+                                Console.WriteLine("Leg Slot provided");
+                                Console.WriteLine("You are trying to equip a Weapon on your Leg Slot. You cant equip a weapon using the Leg Slot");
+                                throw new ArgumentException();                                
+                            case "Body":
+                                Console.WriteLine("Body Slot provided");
+                                Console.WriteLine("You are trying to equip a Weapon on your Body Slot. You cant equip a weapon using the Body Slot");
+                                throw new ArgumentException();                                
+                            case "Head":
+                                Console.WriteLine("Head Slot provided");                                
+                                Console.WriteLine("You are trying to equip a Weapon on your Head Slot. You cant equip a weapon using the Head Slot");
+                                throw new ArgumentException();
+
+                            default:
+                                Console.WriteLine("You did not provided the correct slot. Please chose one of the available slot from 'WeaponManager.AllowedWeaponsSlots'");
+                                throw new ArgumentException();
+                                //break;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        throw;
+                    }                    
                 }
 
-                public static void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
+                public void EquipMyArmor(ArmorManager.ArmorTypes armorTypes)
                 {
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("Equip Armor Method:");
+                    Console.WriteLine("--------------------");
                     Console.WriteLine(armorTypes.Slot);
+                    Console.WriteLine("--------------------");
                 }
             }
 
@@ -203,6 +265,14 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                     Console.WriteLine("Damage: " + Damage);
+                    Console.WriteLine("Available Slots:");
+                    Console.WriteLine(AvailableSlots.Body);
+                    Console.WriteLine(AvailableSlots.Head);
+                    Console.WriteLine(AvailableSlots.Legs);
+                    Console.WriteLine(AvailableSlots.Weapon);
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("End of Base stats:");
+                    Console.WriteLine("--------------------");
                 }
 
                 ///Public override method to calculate provided stats
@@ -298,6 +368,14 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                     Console.WriteLine("Damage: " + Damage);
+                    Console.WriteLine("Available Slots:");
+                    Console.WriteLine(AvailableSlots.Body);
+                    Console.WriteLine(AvailableSlots.Head);
+                    Console.WriteLine(AvailableSlots.Legs);
+                    Console.WriteLine(AvailableSlots.Weapon);
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("End of Base stats:");
+                    Console.WriteLine("--------------------");
                 }
 
                 ///Public override method to calculate provided stats
@@ -394,6 +472,14 @@ namespace My_RPG_Game
                     Console.WriteLine("Dexterity: " + Dexterity);
                     Console.WriteLine("Intelligence: " + Intelligence);
                     Console.WriteLine("Damage: " + Damage);
+                    Console.WriteLine("Available Slots:");
+                    Console.WriteLine(AvailableSlots.Body);
+                    Console.WriteLine(AvailableSlots.Head);
+                    Console.WriteLine(AvailableSlots.Legs);
+                    Console.WriteLine(AvailableSlots.Weapon);
+                    Console.WriteLine("--------------------");
+                    Console.WriteLine("End of Base stats:");
+                    Console.WriteLine("--------------------");
                 }
 
                 ///Public override method to calculate provided stats

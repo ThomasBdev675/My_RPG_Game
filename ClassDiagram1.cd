@@ -92,7 +92,12 @@
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
-      <Enum Name="My_RPG_Game.ArmorManager.AvailableArmor" Collapsed="true">
+      <Enum Name="My_RPG_Game.ArmorManager.AvailableArmor">
+        <TypeIdentifier>
+          <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="My_RPG_Game.ArmorManager.AllowedArmorSlots">
         <TypeIdentifier>
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -109,12 +114,17 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <NestedTypes>
-      <Class Name="My_RPG_Game.WeaponManager.WeaponTypes" Collapsed="true">
+      <Class Name="My_RPG_Game.WeaponManager.WeaponTypes">
         <TypeIdentifier>
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>
       </Class>
       <Enum Name="My_RPG_Game.WeaponManager.AvailableWeapons">
+        <TypeIdentifier>
+          <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="My_RPG_Game.WeaponManager.AllowedWeaponsSlots">
         <TypeIdentifier>
           <NewMemberFileName>EquipmentManager.cs</NewMemberFileName>
         </TypeIdentifier>

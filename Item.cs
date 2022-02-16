@@ -10,6 +10,6 @@ namespace My_RPG_Game
     {      
        public string Name { get; set; }
        public double RequiredLvl { get; set; }
-       public string Slot { get; set; }
+       public object Slot { get; set; }
     }
 }
