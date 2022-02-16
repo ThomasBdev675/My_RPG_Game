@@ -21,12 +21,29 @@ namespace My_RPG_Game
             //Levelup
             MyMage.LevelUp();
 
-            //Create Armor
+            //Create Weapon
+            WeaponManager.WeaponTypes MyWeapon = new WeaponManager.WeaponTypes()
+            {
+                Name = "Staffs",
+                RequiredLvl = 2,
+                Slot = WeaponManager.AllowedWeaponsSlots.Weapon,
+                BaseDamage = 1,
+                AttacksPerSecond = 1,
+                MyWeapons = WeaponManager.AvailableWeapons.Daggers,
+            };
+            Console.WriteLine("Weapon Name: " + MyWeapon.Name);
+            Console.WriteLine("Weapon required lvl: " + MyWeapon.RequiredLvl);
+            Console.WriteLine("Weapon Slot: " + MyWeapon.Slot);
+            Console.WriteLine("Weapon base damage: " + MyWeapon.RequiredLvl);
+            Console.WriteLine("Weapon attack speed: " + MyWeapon.Slot);
+
+
+            //Create Cloth Armor
             ArmorManager.ArmorTypes MyClothArmor = new ArmorManager.ArmorTypes()
             {
                 Name = "Cloth",
                 RequiredLvl = 1,
-                Slot = ArmorManager.AllowedArmorSlots.Body,
+                Slot = ArmorManager.AllowedArmorSlots.Head,                
                 MyArmor = ArmorManager.AvailableArmor.Cloth,
             };
            
@@ -34,44 +51,26 @@ namespace My_RPG_Game
             Console.WriteLine("Armor required lvl: " + MyClothArmor.RequiredLvl);
             Console.WriteLine("Armor Slot: " + MyClothArmor.Slot);
 
-            //Create Weapon
-            WeaponManager.WeaponTypes MyWeapon = new WeaponManager.WeaponTypes()
+            //Create Plate Armor
+            ArmorManager.ArmorTypes MyPlateArmor = new ArmorManager.ArmorTypes()
             {
-                Name = "Axe",
+                Name = "Plate",
                 RequiredLvl = 2,
-                Slot = "Head",
-                //Slot = WeaponManager.AllowedWeaponsSlots.Weapon,
-                BaseDamage = 1,
-                AttacksPerSecond = 1,
-                MyWeapons = WeaponManager.AvailableWeapons.Axes,
+                Slot = ArmorManager.AllowedArmorSlots.Body,
+                MyArmor = ArmorManager.AvailableArmor.Plate,
             };
-           
-            Console.WriteLine("Weapon Name: " + MyWeapon.Name);
-            Console.WriteLine("Weapon required lvl: " + MyWeapon.RequiredLvl);
-            Console.WriteLine("Weapon Slot: " + MyWeapon.Slot);
-            Console.WriteLine("Weapon base damage: " + MyWeapon.RequiredLvl);
-            Console.WriteLine("Weapon attack speed: " + MyWeapon.Slot);
+
+            Console.WriteLine("Armor Name: " + MyClothArmor.Name);
+            Console.WriteLine("Armor required lvl: " + MyClothArmor.RequiredLvl);
+            Console.WriteLine("Armor Slot: " + MyClothArmor.Slot);
+
+
+
 
             MyMage.EquipMyWeapon(MyWeapon);
-            MyMage.EquipMyArmor(MyClothArmor);
-            MyMage.EquipMyWeapon(MyWeapon); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //MyMage.EquipMyArmor(MyClothArmor);
+            //MyMage.EquipMyArmor(MyPlateArmor);
 
         }
-    }
-    
-    
+    }    
 }

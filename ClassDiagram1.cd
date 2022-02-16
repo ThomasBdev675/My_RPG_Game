@@ -109,7 +109,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="My_RPG_Game.WeaponManager">
-    <Position X="11.5" Y="1" Width="2.25" />
+    <Position X="11.75" Y="1" Width="2.25" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -133,6 +133,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EquipmentManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.NotAllowedWeapon">
+    <Position X="14.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NotAllowedWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="My_RPG_Game.WrongSlotException">
+    <Position X="14.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WrongSlotException.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
