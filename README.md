@@ -60,7 +60,7 @@ Below you will find a few example how to use the provided classes and methods:
 ```
 
 
-- Esample to instantiate an armor
+- Example to instantiate an armor
 
 ```
     ArmorManager.ArmorTypes MyClothArmor = new ArmorManager.ArmorTypes()
